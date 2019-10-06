@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>SHU&#39;s Wiki</title>
+    <title>article | SHU&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="SHU&#39;s Wiki">
+        <meta name="keywords" content="article">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="[TOC] 一级标题 1import math \[x^2\over 2\]">
+    <meta name="description" content="[TOC] 一级标题 1import math \[x^2\over 2\] 参考资料">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SHU&#39;s Wiki">
+<meta property="og:title" content="article">
 <meta property="og:url" content="http://yoursite.com/wiki/test/index.html">
 <meta property="og:site_name" content="SHU&#39;s Wiki">
-<meta property="og:description" content="[TOC] 一级标题 1import math \[x^2\over 2\]">
+<meta property="og:description" content="[TOC] 一级标题 1import math \[x^2\over 2\] 参考资料">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-06T18:30:03.646Z">
+<meta property="og:updated_time" content="2019-10-06T19:18:05.649Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SHU&#39;s Wiki">
-<meta name="twitter:description" content="[TOC] 一级标题 1import math \[x^2\over 2\]">
+<meta name="twitter:title" content="article">
+<meta name="twitter:description" content="[TOC] 一级标题 1import math \[x^2\over 2\] 参考资料">
     
 
     
@@ -148,6 +148,102 @@
                 <aside id="sidebar">
    
         
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            测试分类
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/test/">article</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/编程语言/article/">article</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/index/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
@@ -156,10 +252,60 @@
     <div class="article-inner">
         
         
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/测试分类/">测试分类</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/test/">
+            <time datetime="2019-10-06T18:32:43.000Z" itemprop="datePublished">2019-10-07</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki_site/raw/master/source/_posts/test.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki_site/edit/master/source/_posts/test.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki_site/commits/master/source/_posts/test.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            article
+        </h1>
+    
+
+            </header>
+        
         
         <div class="article-entry" itemprop="articleBody">
         
         
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一级标题"><span class="toc-number">1.</span> <span class="toc-text">一级标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                </div>
             
         
         
@@ -167,6 +313,13 @@
 <h2 id="一级标题">一级标题</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[x^2\over 2\]</span></p>
+<h2 id="参考资料">参考资料</h2>
+<blockquote>
+<ul>
+<li><a href></a></li>
+<li><a href></a></li>
+</ul>
+</blockquote>
 
             </div>
         
@@ -179,19 +332,10 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/编程语言/article/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    article
-                
-            </div>
-        </a>
     
-    
-        <a href="/wiki/index/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/编程语言/article/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Hello World</div>
+            <div class="article-nav-title">article</div>
         </a>
     
 </nav>
