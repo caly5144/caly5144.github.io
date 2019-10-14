@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>Latex | SHU&#39;s Wiki</title>
+    
+    
+        <meta name="keywords" content="markdown,latex">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="基础语法 公式的表示 行内的公式，用$...$显示  例： 这是$_{i=0}^n i^2 = $公式 显示为： 这是\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)公式  单独显示的公式用$$...$$来显示  例： $$_{i=0}^n i^2 = $$ 显示为： \[\sum_{i=0}^n i^2 = \frac{(n">
+<meta name="keywords" content="markdown,latex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latex">
+<meta property="og:url" content="http://yoursite.com/wiki/编程语言/markdown/Latex/index.html">
+<meta property="og:site_name" content="SHU&#39;s Wiki">
+<meta property="og:description" content="基础语法 公式的表示 行内的公式，用$...$显示  例： 这是$_{i=0}^n i^2 = $公式 显示为： 这是\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)公式  单独显示的公式用$$...$$来显示  例： $$_{i=0}^n i^2 = $$ 显示为： \[\sum_{i=0}^n i^2 = \frac{(n">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-12T14:44:20.206Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Latex">
+<meta name="twitter:description" content="基础语法 公式的表示 行内的公式，用$...$显示  例： 这是$_{i=0}^n i^2 = $公式 显示为： 这是\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)公式  单独显示的公式用$$...$$来显示  例： $$_{i=0}^n i^2 = $$ 显示为： \[\sum_{i=0}^n i^2 = \frac{(n">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="SHU&#39;s Wiki" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">SHU&#39;s Wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            markdown
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/编程语言/markdown/Latex/">Latex</a></li>  <li class="file"><a href="/wiki/编程语言/markdown/markdown笔记/">markdown笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/编程语言/python/01 基础 Python笔记/">python基础</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/index/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>最新文章</span></h3>
+        <div class="widget">
+            <ul id="recent-post" class>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/编程语言/markdown/markdown笔记/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/编程语言/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程语言/markdown/">markdown</a></p>
+                            <p class="item-title"><a href="/wiki/编程语言/markdown/markdown笔记/" class="title">markdown笔记</a></p>
+                            <p class="item-date"><time datetime="2019-10-12T14:51:41.000Z" itemprop="datePublished">2019-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/编程语言/markdown/Latex/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/编程语言/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程语言/markdown/">markdown</a></p>
+                            <p class="item-title"><a href="/wiki/编程语言/markdown/Latex/" class="title">Latex</a></p>
+                            <p class="item-date"><time datetime="2019-10-12T14:30:06.000Z" itemprop="datePublished">2019-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/编程语言/python/01 基础 Python笔记/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/编程语言/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程语言/python/">python</a></p>
+                            <p class="item-title"><a href="/wiki/编程语言/python/01 基础 Python笔记/" class="title">python基础</a></p>
+                            <p class="item-date"><time datetime="2019-10-12T13:32:43.000Z" itemprop="datePublished">2019-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/index/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/wiki/index/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2019-10-06T18:07:09.463Z" itemprop="datePublished">2019-10-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>归档</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>标签云</span></h3>
+        <div class="widget tagcloud">
+            <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://yanshu.live" rel="external nofollow noopener noreferrer" target="_blank">blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://tools.yanshu.live" rel="external nofollow noopener noreferrer" target="_blank">工具</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-编程语言/markdown/Latex" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/编程语言/">编程语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程语言/markdown/">markdown</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/latex/">latex</a>, <a class="tag-link" href="/tags/markdown/">markdown</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/编程语言/markdown/Latex/">
+            <time datetime="2019-10-12T14:30:06.000Z" itemprop="datePublished">2019-10-12</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/raw/master/_posts/编程语言/markdown/Latex.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/edit/master/_posts/编程语言/markdown/Latex.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/commits/master/_posts/编程语言/markdown/Latex.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Latex
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础语法"><span class="toc-number">1.</span> <span class="toc-text">基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#公式的表示"><span class="toc-number">1.1.</span> <span class="toc-text">公式的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#公式中希腊字母"><span class="toc-number">1.2.</span> <span class="toc-text">公式中希腊字母</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上下标和上下划线"><span class="toc-number">1.3.</span> <span class="toc-text">上下标和上下划线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#括号"><span class="toc-number">1.4.</span> <span class="toc-text">括号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空格与换行"><span class="toc-number">1.5.</span> <span class="toc-text">空格与换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求和极限和微积分等"><span class="toc-number">1.6.</span> <span class="toc-text">求和、极限和微积分等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分数"><span class="toc-number">1.7.</span> <span class="toc-text">分数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体"><span class="toc-number">1.8.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#根号"><span class="toc-number">1.9.</span> <span class="toc-text">根号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵的输入"><span class="toc-number">2.</span> <span class="toc-text">矩阵的输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单矩阵"><span class="toc-number">2.1.</span> <span class="toc-text">简单矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带省略符号的matrix"><span class="toc-number">2.2.</span> <span class="toc-text">带省略符号的Matrix</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带参数的矩阵"><span class="toc-number">2.3.</span> <span class="toc-text">带参数的矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行间矩阵"><span class="toc-number">2.4.</span> <span class="toc-text">行间矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矩阵等式"><span class="toc-number">2.5.</span> <span class="toc-text">矩阵等式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他符号"><span class="toc-number">3.</span> <span class="toc-text">其他符号</span></a></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="基础语法">基础语法</h2>
+<h3 id="公式的表示">公式的表示</h3>
+<p>行内的公式，用$...$显示</p>
+<blockquote>
+<p>例：</p>
+<p>这是$_{i=0}^n i^2 = $公式</p>
+<p>显示为：</p>
+<p>这是<span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span>公式</p>
+</blockquote>
+<p>单独显示的公式用$$...$$来显示</p>
+<blockquote>
+<p>例：</p>
+<p>$$_{i=0}^n i^2 = $$</p>
+<p>显示为：</p>
+<p><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></p>
+</blockquote>
+<h3 id="公式中希腊字母">公式中希腊字母</h3>
+<ul>
+<li><p>用,,……来表示小写:<span class="math inline">\(\alpha\)</span>,<span class="math inline">\(\beta\)</span>;</p></li>
+<li><p>用首字母大写的,,…来表示大写<span class="math inline">\(\Theta\)</span>,<span class="math inline">\(\Delta\)</span></p></li>
+<li><p>与英文字母一致的大写字母用大写英文字母表示. 比如用A表示.</p></li>
+<li><p>有些希腊字母有一些变体. 比如<span class="math inline">\(\epsilon\)</span> <span class="math inline">\(\varepsilon\)</span>,<span class="math inline">\(\phi\)</span> <span class="math inline">\(\varphi\)</span></p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>字母名称</th>
+<th>大写</th>
+<th>markdown</th>
+<th>小写</th>
+<th>markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>alpha</td>
+<td><span class="math inline">\(A\)</span></td>
+<td>A</td>
+<td><span class="math inline">\(\alpha\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>beta</td>
+<td><span class="math inline">\(B\)</span></td>
+<td>B</td>
+<td><span class="math inline">\(\beta\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>gamma</td>
+<td><span class="math inline">\(\Gamma\)</span></td>
+<td></td>
+<td><span class="math inline">\(\gamma\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>delta</td>
+<td><span class="math inline">\(\Delta\)</span></td>
+<td></td>
+<td><span class="math inline">\(\delta\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>eplison</td>
+<td><span class="math inline">\(E\)</span></td>
+<td>E</td>
+<td><span class="math inline">\(\epsilon\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>eta</td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(\eta\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>zeta</td>
+<td><span class="math inline">\(Z\)</span></td>
+<td>Z</td>
+<td><span class="math inline">\(\zeta\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>theta</td>
+<td><span class="math inline">\(\Theta\)</span></td>
+<td></td>
+<td><span class="math inline">\(\theta\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>iota</td>
+<td><span class="math inline">\(I\)</span></td>
+<td>I</td>
+<td><span class="math inline">\(\iota\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>kappa</td>
+<td><span class="math inline">\(K\)</span></td>
+<td>K</td>
+<td><span class="math inline">\(\kappa\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>lambda</td>
+<td><span class="math inline">\(\Lambda\)</span></td>
+<td></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mu</td>
+<td><span class="math inline">\(M\)</span></td>
+<td>M</td>
+<td><span class="math inline">\(\mu\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>nu</td>
+<td><span class="math inline">\(N\)</span></td>
+<td>N</td>
+<td><span class="math inline">\(\nu\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>xi</td>
+<td><span class="math inline">\(\Xi\)</span></td>
+<td></td>
+<td><span class="math inline">\(\xi\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>omicron</td>
+<td><span class="math inline">\(O\)</span></td>
+<td>O</td>
+<td><span class="math inline">\(\omicron\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>pi</td>
+<td><span class="math inline">\(\Pi\)</span></td>
+<td></td>
+<td><span class="math inline">\(\pi\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>rho</td>
+<td><span class="math inline">\(P\)</span></td>
+<td>P</td>
+<td><span class="math inline">\(\rho\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>sigma</td>
+<td><span class="math inline">\(\Sigma\)</span></td>
+<td></td>
+<td><span class="math inline">\(\sigma\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>tau</td>
+<td><span class="math inline">\(T\)</span></td>
+<td>T</td>
+<td><span class="math inline">\(\tau\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>upsilon</td>
+<td><span class="math inline">\(\Upsilon\)</span></td>
+<td></td>
+<td><span class="math inline">\(\upsilon\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>phi</td>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td></td>
+<td><span class="math inline">\(\phi\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>chi</td>
+<td><span class="math inline">\(X\)</span></td>
+<td>X</td>
+<td><span class="math inline">\(\chi\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>psi</td>
+<td><span class="math inline">\(\Psi\)</span></td>
+<td></td>
+<td><span class="math inline">\(\psi\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>omega</td>
+<td><span class="math inline">\(\Omega\)</span></td>
+<td></td>
+<td><span class="math inline">\(\omega\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="上下标和上下划线">上下标和上下划线</h3>
+<p>上标用'^',下标用'_'</p>
+<blockquote>
+<p>例：</p>
+<p>用$x_i^2$表示<span class="math inline">\(x_i^2\)</span></p>
+<p>用$log_2 x$表示<span class="math inline">\(log_2 x\)</span></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th>上划线</th>
+<th>markdown</th>
+<th>下划线</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\overline{a+bi}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\underline{431}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="括号">括号</h3>
+<p>部分括号(),[],||,||||可以直接使用，{}需要用''转义(后四个是取整函数)</p>
+<table>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\langle\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rangle\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lceil\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rceil\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lfloor\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rfloor\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>这些括号在直接使用时不会随公式的高度的增加而上下拉伸, 因此需要用.</p>
+<blockquote>
+<p>例：</p>
+<p>$()$ 显示为:</p>
+<p><span class="math display">\[(\frac{\sqrt x}{y^3})\]</span></p>
+<p>$()$显示为:</p>
+<p><span class="math display">\[\left(\frac{\sqrt x}{y^3}\right)\]</span></p>
+</blockquote>
+<p>如果需要手动拉伸,可以用</p>
+<blockquote>
+<p>例：</p>
+<p>$((((x))))$显示为:</p>
+<p><span class="math display">\[\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\]</span></p>
+</blockquote>
+<h3 id="空格与换行">空格与换行</h3>
+<p>LaTex默认是省略空格，要输入空格就得自己输入命令，mu是一个数学单位。</p>
+<table>
+<thead>
+<tr class="header">
+<th>效果</th>
+<th>说明</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a\quad b\)</span></td>
+<td>空格宽度是当前字宽(18mu)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\, b\)</span></td>
+<td>空格宽度是3mu</td>
+<td>\,</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a\: b\)</span></td>
+<td>空格宽度是4mu</td>
+<td>:</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\; b\)</span></td>
+<td>空格宽度是5mu</td>
+<td>;</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a\! b\)</span></td>
+<td>空格宽度是-3mu(向左缩)</td>
+<td>!</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\ b\)</span></td>
+<td>空格宽度是标准空格键效</td>
+<td>在</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a\qquad b\)</span></td>
+<td>空格宽度是36mu</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>换行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\</span><br></pre></td></tr></table></figure>
+<h3 id="求和极限和微积分等">求和、极限和微积分等</h3>
+<table>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sum\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\int\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\oint\)</span></td>
+<td>$oint$</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\prod\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\bigcup\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\bigcap\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\iint\)</span></td>
+<td>$$</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\iiint\)</span></td>
+<td>$$</td>
+</tr>
+</tbody>
+</table>
+<p>以上符号在使用时以上下标来表示上下线(参考前面的上标和下标部分)</p>
+<table>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sum_{i=0}^\infty i^2\)</span></td>
+<td>_{i=0}<sup>i</sup>2</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\lim_{x \to -\infty}\)</span></td>
+<td>_{x -}</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{d}{dx}\left(x^2\right) = 2x\)</span></td>
+<td>(x^2) = 2x</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\int 2x\,dx = x^2+C\)</span></td>
+<td>2x,dx = x^2+C</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{\partial^2U}{\partial x^2} + \frac{\partial^2U}{\partial y^2}\)</span></td>
+<td> + </td>
+</tr>
+</tbody>
+</table>
+<p><strong>如果上下限超过一个字符记得加{}</strong></p>
+<h3 id="分数">分数</h3>
+<p>1.用，多个字母要用{}</p>
+<p>两种尺寸：frac和dfrac</p>
+<table>
+<thead>
+<tr class="header">
+<th>尺寸较小</th>
+<th>因此适合打印</th>
+<th>尺寸适中</th>
+<th>用于显示器展示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>符号</td>
+<td>语法</td>
+<td>符号</td>
+<td>语法</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\frac{1+\frac{1}{x}}{3x + 2}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\dfrac{1+\frac{1}{x}}{3x + 2}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>2.用，用于较复杂的分子分母</p>
+<blockquote>
+<p>例：</p>
+<p>${a+1b+1}$表示<span class="math inline">\({a+1\over b+1}\)</span></p>
+</blockquote>
+<h3 id="字体">字体</h3>
+<table>
+<thead>
+<tr class="header">
+<th>markdown</th>
+<th>字体</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Blackboard bold</td>
+<td><span class="math inline">\(\mathbb A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Balckboard Bold</td>
+<td><span class="math inline">\(\Bbb A\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>boldface</td>
+<td><span class="math inline">\(\mathbf A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>typewriter</td>
+<td><span class="math inline">\(\mathtt A\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>roman font</td>
+<td><span class="math inline">\(\mathrm A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>san-serif</td>
+<td><span class="math inline">\(\mathsf A\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>calligraphic</td>
+<td><span class="math inline">\(\mathcal A\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>script letters</td>
+<td><span class="math inline">\(\mathscr A\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="根号">根号</h3>
+<p>用</p>
+<blockquote>
+<p>例：</p>
+<p>$$表示<span class="math inline">\(\sqrt{x^3}\)</span></p>
+<p>$[3]{xy}$表示<span class="math inline">\(\sqrt[3]{\frac xy}\)</span></p>
+</blockquote>
+<p>如果是更复杂的开方,最好用指数形式{…}^a</p>
+<blockquote>
+<p>例：</p>
+<p>$({xy})^{1/2}$表示<span class="math inline">\(({\frac xy})^{1/2}\)</span></p>
+</blockquote>
+<h2 id="矩阵的输入">矩阵的输入</h2>
+<h3 id="简单矩阵">简单矩阵</h3>
+<p>用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;matrix&#125;</span><br><span class="line">……</span><br><span class="line">……</span><br><span class="line">\end&#123;matrix&#125; \tag&#123;n&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>表示矩阵，其中，数字与数字之间用&amp;分隔，行与行之间用\分隔，不用$$$$声明也是可以的！</p>
+<p>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">  \begin&#123;matrix&#125;</span><br><span class="line">   1 &amp; 2 &amp; 3 \\</span><br><span class="line">   4 &amp; 5 &amp; 6 \\</span><br><span class="line">   7 &amp; 8 &amp; 9</span><br><span class="line">  \end&#123;matrix&#125; \tag&#123;1&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+  \begin{matrix}
+   1 &amp; 2 &amp; 3 \\
+   4 &amp; 5 &amp; 6 \\
+   7 &amp; 8 &amp; 9
+  \end{matrix} \tag{1}
+\]</span></p>
+<p>其中，<code>matrix</code>可修改为<code>pmatrix</code>、<code>bmatrix</code>、<code>Bmatrix</code>、<code>vmatrix</code>、<code>Vmatrix</code>等，分别代表(),[],{},||,||||型矩阵</p>
+<p>表示该矩阵的编号，当然可以去掉，也可以换成任意数字</p>
+<h3 id="带省略符号的matrix">带省略符号的Matrix</h3>
+<p>如果矩阵元素太多，可以使用<code>\cdots</code> ⋯ <code>\ddots</code> ⋱ <code>\vdots</code>⋮ 等省略符号来定义矩阵。 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;bmatrix&#125;</span><br><span class="line"> 1      &amp; 2      &amp; \cdots &amp; 4      \\</span><br><span class="line"> 7      &amp; 6      &amp; \cdots &amp; 5      \\</span><br><span class="line"> \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\</span><br><span class="line"> 8      &amp; 9      &amp; \cdots &amp; 0      \\</span><br><span class="line">\end&#123;bmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\begin{bmatrix}
+ 1      &amp; 2      &amp; \cdots &amp; 4      \\
+ 7      &amp; 6      &amp; \cdots &amp; 5      \\
+ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+ 8      &amp; 9      &amp; \cdots &amp; 0      \\
+\end{bmatrix}
+\]</span></p>
+<h3 id="带参数的矩阵">带参数的矩阵</h3>
+<p>比如写增广矩阵，可能需要最右边一列单独考虑。可以用array命令来处理（此时需要另外一种写法，在此不过多介绍，也就是加个<code>\left[……\right]</code>的问题）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$ </span><br><span class="line">\left[</span><br><span class="line">    \begin&#123;array&#125;&#123;cc|c&#125;</span><br><span class="line">      1 &amp; 2 &amp; 3 \\</span><br><span class="line">      4 &amp; 5 &amp; 6</span><br><span class="line">    \end&#123;array&#125;</span><br><span class="line">\right] \tag&#123;7&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[ 
+\left[
+    \begin{array}{cc|c}
+      1 &amp; 2 &amp; 3 \\
+      4 &amp; 5 &amp; 6
+    \end{array}
+\right] \tag{7}
+\]</span></p>
+<h3 id="行间矩阵">行间矩阵</h3>
+<p>可以使用<code>\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)</code>，</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们使用矩阵 $\bigl( \begin&#123;smallmatrix&#125; a &amp; b \\ c &amp; d \end&#123;smallmatrix&#125; \bigr)$ 作为因子矩阵，将其...</span><br></pre></td></tr></table></figure>
+<p>得到：</p>
+<p>我们使用矩阵 <span class="math inline">\(\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)\)</span> 作为因子矩阵，将其...</p>
+<h3 id="矩阵等式">矩阵等式</h3>
+<p>先用<code>\begin{equation}</code>, <code>\end{equation}</code> 声明一下，然后在其中写就行，注意等号左右千万不能换行！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">A=\begin&#123;bmatrix&#125;</span><br><span class="line">c_1(w_1,w_2) \\</span><br><span class="line">c_2(w_1,w_2)</span><br><span class="line">\end&#123;bmatrix&#125; </span><br><span class="line">=\begin&#123;bmatrix&#125;</span><br><span class="line">a_&#123;11&#125; &amp; a_&#123;12&#125; \\</span><br><span class="line">a_&#123;21&#125; &amp; a_&#123;22&#125;</span><br><span class="line">\end&#123;bmatrix&#125;</span><br><span class="line">\begin&#123;bmatrix&#125;</span><br><span class="line">w_1 \\</span><br><span class="line">w_2</span><br><span class="line">\end&#123;bmatrix&#125; \tag&#123;8&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\begin{equation}
+A=\begin{bmatrix}
+c_1(w_1,w_2) \\
+c_2(w_1,w_2)
+\end{bmatrix} 
+=\begin{bmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22}
+\end{bmatrix}
+\begin{bmatrix}
+w_1 \\
+w_2
+\end{bmatrix} \tag{8}
+\end{equation} 
+\]</span></p>
+<h2 id="其他符号">其他符号</h2>
+<table>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>比较</td>
+<td></td>
+<td><span class="math inline">\(\le\)</span></td>
+<td></td>
+<td><span class="math inline">\(\ge\)</span></td>
+<td></td>
+<td><span class="math inline">\(\ll\)</span></td>
+<td></td>
+<td><span class="math inline">\(\gg\)</span></td>
+<td></td>
+<td><span class="math inline">\(\neq\)</span></td>
+<td></td>
+<td><span class="math inline">\(\approx\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><span class="math inline">\(\sim\)</span></td>
+<td></td>
+<td><span class="math inline">\(\simeq\)</span></td>
+<td></td>
+<td><span class="math inline">\(\cong\)</span></td>
+<td></td>
+<td><span class="math inline">\(\equiv\)</span></td>
+<td></td>
+<td><span class="math inline">\(\prec\)</span></td>
+<td></td>
+<td><span class="math inline">\(\lhd\)</span></td>
+</tr>
+<tr class="odd">
+<td>运算</td>
+<td></td>
+<td><span class="math inline">\(\times\)</span></td>
+<td></td>
+<td><span class="math inline">\(\div\)</span></td>
+<td></td>
+<td><span class="math inline">\(\pm\)</span></td>
+<td></td>
+<td><span class="math inline">\(\mp\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>集合</td>
+<td></td>
+<td><span class="math inline">\(\cup\)</span></td>
+<td></td>
+<td><span class="math inline">\(\cap\)</span></td>
+<td></td>
+<td><span class="math inline">\(\setminus\)</span></td>
+<td></td>
+<td><span class="math inline">\(\subset\)</span></td>
+<td></td>
+<td><span class="math inline">\(\subseteq\)</span></td>
+<td></td>
+<td><span class="math inline">\(\subsetneq\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><span class="math inline">\(\supset\)</span></td>
+<td></td>
+<td><span class="math inline">\(\in\)</span></td>
+<td></td>
+<td><span class="math inline">\(\ni\)</span></td>
+<td></td>
+<td><span class="math inline">\(\notin\)</span></td>
+<td></td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+<td></td>
+<td><span class="math inline">\(\varnothing\)</span></td>
+</tr>
+<tr class="even">
+<td>头顶符号</td>
+<td></td>
+<td><span class="math inline">\(\hat{x}\)</span></td>
+<td>{x}</td>
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\vec{x}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\dot{x}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\ddot{x}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>方向</td>
+<td></td>
+<td><span class="math inline">\(\to\)</span></td>
+<td></td>
+<td><span class="math inline">\(\gets\)</span></td>
+<td></td>
+<td><span class="math inline">\(\Rightarrow\)</span></td>
+<td></td>
+<td><span class="math inline">\(\Leftarrow\)</span></td>
+<td></td>
+<td><span class="math inline">\(\Leftrightarrow\)</span></td>
+<td></td>
+<td><span class="math inline">\(\mapsto\)</span></td>
+</tr>
+<tr class="even">
+<td>标识</td>
+<td></td>
+<td><span class="math inline">\(\star\)</span></td>
+<td></td>
+<td><span class="math inline">\(\ast\)</span></td>
+<td></td>
+<td><span class="math inline">\(\oplus\)</span></td>
+<td></td>
+<td><span class="math inline">\(\circ\)</span></td>
+<td></td>
+<td><span class="math inline">\(\bullet\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>命题</td>
+<td></td>
+<td><span class="math inline">\(\land\)</span></td>
+<td></td>
+<td><span class="math inline">\(\lor\)</span></td>
+<td></td>
+<td><span class="math inline">\(\lnot\)</span></td>
+<td></td>
+<td><span class="math inline">\(\forall\)</span></td>
+<td></td>
+<td><span class="math inline">\(\exists\)</span></td>
+<td></td>
+<td><span class="math inline">\(\top\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><span class="math inline">\(\bot\)</span></td>
+<td></td>
+<td><span class="math inline">\(\vdash\)</span></td>
+<td></td>
+<td><span class="math inline">\(\vDash\)</span></td>
+<td></td>
+<td><span class="math inline">\(\because\)</span></td>
+<td></td>
+<td><span class="math inline">\(\therefore\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>其他</td>
+<td></td>
+<td><span class="math inline">\(\infty\)</span></td>
+<td></td>
+<td><span class="math inline">\(\triangle\)</span></td>
+<td></td>
+<td><span class="math inline">\(\angle\)</span></td>
+<td></td>
+<td><span class="math inline">\(\checkmark\)</span></td>
+<td></td>
+<td><span class="math inline">\(\nabla\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>{n+1 2k}or 表示<span class="math inline">\({n+1 \choose 2k}\)</span></li>
+<li><span class="math inline">\(\cdot\)</span> 如：<span class="math inline">\(x \cdot y\)</span></li>
+<li><span class="math inline">\(\ldots\)</span> 如：<span class="math inline">\(a_1,a_2,\ldots,a_n\)</span></li>
+<li><span class="math inline">\(\cdots\)</span> 如：<span class="math inline">\(a_1+a_2+\cdots+a_n\)</span></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/编程语言/markdown/markdown笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    markdown笔记
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/编程语言/python/01 基础 Python笔记/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">python基础</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            雁陎 &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
