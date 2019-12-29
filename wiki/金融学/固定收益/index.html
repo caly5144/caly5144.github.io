@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>固定收益及衍生品 | SHU&#39;s Wiki</title>
+    
+    
+        <meta name="keywords" content="利率,固定收益,无息债券,伊藤积分">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="利率和银行账户 银行存款 离散复利 \[P_i = {1\over (1+r)^i}\] 连续复利  利率为常数。当到期时间为t时，连续复利计息下的银行账户为：  \[\lim_{n\to\infty}(1+{r\over n})^{nt}=e^{rt}\] 因此，折现值为\(e^{-rt}\)  利率为随机变量。当利率是时间的函数时，短期利率为r(s)，此时银行账户为：">
+<meta name="keywords" content="利率,固定收益,无息债券,伊藤积分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="固定收益及衍生品">
+<meta property="og:url" content="http://yoursite.com/wiki/金融学/固定收益/index.html">
+<meta property="og:site_name" content="SHU&#39;s Wiki">
+<meta property="og:description" content="利率和银行账户 银行存款 离散复利 \[P_i = {1\over (1+r)^i}\] 连续复利  利率为常数。当到期时间为t时，连续复利计息下的银行账户为：  \[\lim_{n\to\infty}(1+{r\over n})^{nt}=e^{rt}\] 因此，折现值为\(e^{-rt}\)  利率为随机变量。当利率是时间的函数时，短期利率为r(s)，此时银行账户为：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://im.yanshu.work/article/20191222204106295_27022.png">
+<meta property="og:image" content="https://im.yanshu.work/article/20191223110224792_11594.png">
+<meta property="og:updated_time" content="2019-12-29T04:18:32.184Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="固定收益及衍生品">
+<meta name="twitter:description" content="利率和银行账户 银行存款 离散复利 \[P_i = {1\over (1+r)^i}\] 连续复利  利率为常数。当到期时间为t时，连续复利计息下的银行账户为：  \[\lim_{n\to\infty}(1+{r\over n})^{nt}=e^{rt}\] 因此，折现值为\(e^{-rt}\)  利率为随机变量。当利率是时间的函数时，短期利率为r(s)，此时银行账户为：">
+<meta name="twitter:image" content="https://im.yanshu.work/article/20191222204106295_27022.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="SHU&#39;s Wiki" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">SHU&#39;s Wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            经济学
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            其他
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/其他/博弈论/">博弈论</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            发展经济学
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/发展经济学/三农问题/">三农问题</a></li>  <li class="file"><a href="/wiki/经济学/发展经济学/城市化/">城市化</a></li>  <li class="file"><a href="/wiki/经济学/发展经济学/经济发展战略与政府/">经济发展战略与政府</a></li>  <li class="file"><a href="/wiki/经济学/发展经济学/二元经济/">二元经济</a></li>  <li class="file"><a href="/wiki/经济学/发展经济学/导论与工业化/">导论与工业化</a></li>  <li class="file"><a href="/wiki/经济学/发展经济学/贫困与收入平等/">贫困与收入平等</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            国际贸易
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/国际贸易/03特定要素模型/">03特定要素模型</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/04规模报酬递增和垄断竞争模型/">04规模报酬递增和垄断竞争模型</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/02H-O模型/">02H-O模型</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/01李嘉图模型/">01李嘉图模型</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/05劳动力和资本的国际流动/">05劳动力和资本的国际流动</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/06完全竞争下的进口关税和配额/">06完全竞争下的进口关税和配额</a></li>  <li class="file"><a href="/wiki/经济学/国际贸易/07国际贸易策略/">07国际贸易策略</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            经济制度思想史
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/经济制度思想史/03斯密动态经济增长与布罗代尔钟罩/">斯密动态经济增长与布罗代尔钟罩</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/02斯密型动态经济增长及其形成机制/">斯密型动态经济增长及其形成机制</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/08法制与市场：中国历史上市场经济周期兴衰的法制原因/">法制与市场：中国历史上市场经济周期兴衰的法制原因</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/01西方世界近代兴起和晚清帝国相对停滞的制度经济学反思/">西方世界近代兴起和晚清帝国相对停滞的制度经济学反思</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/04近代西方世界兴起： 斯密型动态经济增长的形成与布罗代尔钟罩的破散/">近代西方世界兴起： 斯密型动态经济增长的形成与布罗代尔钟罩的破散</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/07王朝更替与官府控制下明清时期中国社会内部市场经济秩序的周期性的蕴生、 成长与衰退/">王朝更替与官府控制下明清时期中国社会内部市场经济秩序的周期性的蕴生、 成长与衰退</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/05近代欧洲历史上市场秩序与法律制度的互动生成与共生演化/">近代欧洲历史上市场秩序与法律制度的互动生成与共生演化</a></li>  <li class="file"><a href="/wiki/经济学/经济制度思想史/06近代欧洲历史上各国宪政民主的生成、建构与演进/">近代欧洲历史上各国宪政民主的生成、建构与演进</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            经济学基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/经济学基础/宏观经济学/">宏观经济学</a></li>  <li class="file"><a href="/wiki/经济学/经济学基础/微观经济学/">微观经济学</a></li>  <li class="file"><a href="/wiki/经济学/经济学基础/政治经济学笔记/">政治经济学笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            经营管理
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/经营管理/国际商务/">国际商务</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            货币经济学
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/经济学/货币经济学/01导论/">01导论</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/02货币基础/">02货币基础</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/05利率/">05利率</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/07延伸：中国人民银行/">07延伸：中国人民银行</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/04货币需求/">04货币需求</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/03货币供应/">03货币供应</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/06货币与宏观经济/">06货币与宏观经济</a></li>  <li class="file"><a href="/wiki/经济学/货币经济学/08延伸：美联储/">08延伸：美联储</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            markdown
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/编程语言/markdown/Latex/">Latex</a></li>  <li class="file"><a href="/wiki/编程语言/markdown/markdown笔记/">markdown笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/编程语言/python/01 基础 Python笔记/">python基础</a></li>  <li class="file"><a href="/wiki/编程语言/python/02 numpy库/">numpy库</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            读书笔记
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/读书笔记/《行动的勇气》读书笔记/">《行动的勇气》读书笔记</a></li>  <li class="file"><a href="/wiki/读书笔记/论语与算盘/">论语与算盘</a></li>  <li class="file"><a href="/wiki/读书笔记/农业和工业革命文献阅读笔记/">农业和工业革命文献阅读笔记</a></li>  <li class="file"><a href="/wiki/读书笔记/《金融的本质》阅读笔记/">《金融的本质》阅读笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            金融学
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/金融学/固定收益/">固定收益及衍生品</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/wiki/"></a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>最新文章</span></h3>
+        <div class="widget">
+            <ul id="recent-post" class>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/金融学/固定收益/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/金融学/">金融学</a></p>
+                            <p class="item-title"><a href="/wiki/金融学/固定收益/" class="title">固定收益及衍生品</a></p>
+                            <p class="item-date"><time datetime="2019-12-29T04:11:47.000Z" itemprop="datePublished">2019-12-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/经济学/国际贸易/07国际贸易策略/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/经济学/">经济学</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/经济学/国际贸易/">国际贸易</a></p>
+                            <p class="item-title"><a href="/wiki/经济学/国际贸易/07国际贸易策略/" class="title">07国际贸易策略</a></p>
+                            <p class="item-date"><time datetime="2019-10-24T06:42:33.000Z" itemprop="datePublished">2019-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/经济学/国际贸易/06完全竞争下的进口关税和配额/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/经济学/">经济学</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/经济学/国际贸易/">国际贸易</a></p>
+                            <p class="item-title"><a href="/wiki/经济学/国际贸易/06完全竞争下的进口关税和配额/" class="title">06完全竞争下的进口关税和配额</a></p>
+                            <p class="item-date"><time datetime="2019-10-24T06:42:30.000Z" itemprop="datePublished">2019-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/经济学/国际贸易/05劳动力和资本的国际流动/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/经济学/">经济学</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/经济学/国际贸易/">国际贸易</a></p>
+                            <p class="item-title"><a href="/wiki/经济学/国际贸易/05劳动力和资本的国际流动/" class="title">05劳动力和资本的国际流动</a></p>
+                            <p class="item-date"><time datetime="2019-10-24T06:42:24.000Z" itemprop="datePublished">2019-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/经济学/国际贸易/01李嘉图模型/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/经济学/">经济学</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/经济学/国际贸易/">国际贸易</a></p>
+                            <p class="item-title"><a href="/wiki/经济学/国际贸易/01李嘉图模型/" class="title">01李嘉图模型</a></p>
+                            <p class="item-date"><time datetime="2019-10-24T06:42:11.000Z" itemprop="datePublished">2019-10-24</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>归档</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">43</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>标签云</span></h3>
+        <div class="widget tagcloud">
+            <a href="/tags/FDI/" style="font-size: 10px;">FDI</a> <a href="/tags/GDP/" style="font-size: 10px;">GDP</a> <a href="/tags/GDP锦标赛/" style="font-size: 10px;">GDP锦标赛</a> <a href="/tags/H-O模型/" style="font-size: 10px;">H-O模型</a> <a href="/tags/IS-LM模型/" style="font-size: 16.67px;">IS-LM模型</a> <a href="/tags/M0/" style="font-size: 10px;">M0</a> <a href="/tags/M1/" style="font-size: 10px;">M1</a> <a href="/tags/M2/" style="font-size: 10px;">M2</a> <a href="/tags/Rybczynski-Theorem/" style="font-size: 13.33px;">Rybczynski Theorem</a> <a href="/tags/SWTO模型/" style="font-size: 10px;">SWTO模型</a> <a href="/tags/Stolper-Samuelson-Theorem/" style="font-size: 10px;">Stolper-Samuelson Theorem</a> <a href="/tags/WTO/" style="font-size: 10px;">WTO</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/markdown/" style="font-size: 13.33px;">markdown</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/中世纪/" style="font-size: 13.33px;">中世纪</a> <a href="/tags/中国人民银行/" style="font-size: 10px;">中国人民银行</a> <a href="/tags/中期借贷便利/" style="font-size: 10px;">中期借贷便利</a> <a href="/tags/义利合一/" style="font-size: 10px;">义利合一</a> <a href="/tags/乡村工业/" style="font-size: 10px;">乡村工业</a> <a href="/tags/乡镇企业/" style="font-size: 10px;">乡镇企业</a> <a href="/tags/二元经济/" style="font-size: 10px;">二元经济</a> <a href="/tags/亚当斯密/" style="font-size: 16.67px;">亚当斯密</a> <a href="/tags/交易动机/" style="font-size: 10px;">交易动机</a> <a href="/tags/交易成本/" style="font-size: 10px;">交易成本</a> <a href="/tags/产业内贸易/" style="font-size: 10px;">产业内贸易</a> <a href="/tags/产权/" style="font-size: 13.33px;">产权</a> <a href="/tags/人权/" style="font-size: 10px;">人权</a> <a href="/tags/价值规律/" style="font-size: 10px;">价值规律</a> <a href="/tags/企业家精神/" style="font-size: 10px;">企业家精神</a> <a href="/tags/伊藤积分/" style="font-size: 10px;">伊藤积分</a> <a href="/tags/伯南克/" style="font-size: 13.33px;">伯南克</a> <a href="/tags/伯川德竞争/" style="font-size: 10px;">伯川德竞争</a> <a href="/tags/余粮/" style="font-size: 10px;">余粮</a> <a href="/tags/供给/" style="font-size: 10px;">供给</a> <a href="/tags/促销策略/" style="font-size: 10px;">促销策略</a> <a href="/tags/全球化/" style="font-size: 10px;">全球化</a> <a href="/tags/公开市场委员会/" style="font-size: 10px;">公开市场委员会</a> <a href="/tags/公开市场操作/" style="font-size: 13.33px;">公开市场操作</a> <a href="/tags/关税/" style="font-size: 10px;">关税</a> <a href="/tags/内卷化增长/" style="font-size: 10px;">内卷化增长</a> <a href="/tags/再生产/" style="font-size: 10px;">再生产</a> <a href="/tags/农业发展/" style="font-size: 10px;">农业发展</a> <a href="/tags/农业增长/" style="font-size: 10px;">农业增长</a> <a href="/tags/农业改革/" style="font-size: 10px;">农业改革</a> <a href="/tags/农业革命/" style="font-size: 10px;">农业革命</a> <a href="/tags/农产品价格/" style="font-size: 10px;">农产品价格</a> <a href="/tags/农村土地市场/" style="font-size: 10px;">农村土地市场</a> <a href="/tags/农村金融/" style="font-size: 10px;">农村金融</a> <a href="/tags/农民工/" style="font-size: 10px;">农民工</a> <a href="/tags/冷热分析法/" style="font-size: 10px;">冷热分析法</a> <a href="/tags/凯恩斯/" style="font-size: 10px;">凯恩斯</a> <a href="/tags/出口定价/" style="font-size: 10px;">出口定价</a> <a href="/tags/出口导向型战略/" style="font-size: 10px;">出口导向型战略</a> <a href="/tags/分工/" style="font-size: 16.67px;">分工</a> <a href="/tags/刘易斯拐点/" style="font-size: 10px;">刘易斯拐点</a> <a href="/tags/刘易斯模型/" style="font-size: 13.33px;">刘易斯模型</a> <a href="/tags/创新/" style="font-size: 10px;">创新</a> <a href="/tags/利息/" style="font-size: 10px;">利息</a> <a href="/tags/利润/" style="font-size: 13.33px;">利润</a> <a href="/tags/利率/" style="font-size: 20px;">利率</a> <a href="/tags/利率市场化/" style="font-size: 10px;">利率市场化</a> <a href="/tags/利率政策/" style="font-size: 10px;">利率政策</a> <a href="/tags/利率结构/" style="font-size: 10px;">利率结构</a> <a href="/tags/利率走廊/" style="font-size: 10px;">利率走廊</a> <a href="/tags/制度/" style="font-size: 10px;">制度</a> <a href="/tags/制度经济学/" style="font-size: 10px;">制度经济学</a> <a href="/tags/前瞻性指导/" style="font-size: 13.33px;">前瞻性指导</a> <a href="/tags/剪刀差/" style="font-size: 10px;">剪刀差</a> <a href="/tags/功利主义/" style="font-size: 10px;">功利主义</a> <a href="/tags/加息/" style="font-size: 10px;">加息</a> <a href="/tags/劳动力流动/" style="font-size: 10px;">劳动力流动</a> <a href="/tags/劳动收入/" style="font-size: 10px;">劳动收入</a> <a href="/tags/北京共识/" style="font-size: 10px;">北京共识</a> <a href="/tags/华勒斯坦/" style="font-size: 10px;">华勒斯坦</a> <a href="/tags/华盛顿共识/" style="font-size: 10px;">华盛顿共识</a> <a href="/tags/博弈论/" style="font-size: 13.33px;">博弈论</a> <a href="/tags/反贫困政策/" style="font-size: 10px;">反贫困政策</a> <a href="/tags/发展计划/" style="font-size: 10px;">发展计划</a> <a href="/tags/古诺竞争/" style="font-size: 10px;">古诺竞争</a> <a href="/tags/可贷资金理论/" style="font-size: 10px;">可贷资金理论</a> <a href="/tags/司法独立/" style="font-size: 10px;">司法独立</a> <a href="/tags/合作经济学/" style="font-size: 10px;">合作经济学</a> <a href="/tags/后华盛顿共识/" style="font-size: 10px;">后华盛顿共识</a> <a href="/tags/哈耶克/" style="font-size: 10px;">哈耶克</a> <a href="/tags/哈里斯—托达罗模型/" style="font-size: 10px;">哈里斯—托达罗模型</a> <a href="/tags/商人法/" style="font-size: 10px;">商人法</a> <a href="/tags/商务环境/" style="font-size: 10px;">商务环境</a> <a href="/tags/商品/" style="font-size: 10px;">商品</a> <a href="/tags/团体贷款/" style="font-size: 10px;">团体贷款</a> <a href="/tags/固定收益/" style="font-size: 10px;">固定收益</a> <a href="/tags/国际竞争/" style="font-size: 10px;">国际竞争</a> <a href="/tags/国际经营/" style="font-size: 10px;">国际经营</a> <a href="/tags/土地制度/" style="font-size: 10px;">土地制度</a> <a href="/tags/圣地亚哥共识/" style="font-size: 10px;">圣地亚哥共识</a> <a href="/tags/地租/" style="font-size: 10px;">地租</a> <a href="/tags/垄断/" style="font-size: 10px;">垄断</a> <a href="/tags/垄断竞争/" style="font-size: 13.33px;">垄断竞争</a> <a href="/tags/城市倾向政策/" style="font-size: 10px;">城市倾向政策</a> <a href="/tags/城市化/" style="font-size: 10px;">城市化</a> <a href="/tags/城市法/" style="font-size: 10px;">城市法</a> <a href="/tags/基督教/" style="font-size: 10px;">基督教</a> <a href="/tags/士魂商才/" style="font-size: 10px;">士魂商才</a> <a href="/tags/外汇市场干预/" style="font-size: 10px;">外汇市场干预</a> <a href="/tags/外汇改革/" style="font-size: 10px;">外汇改革</a> <a href="/tags/外汇管制/" style="font-size: 10px;">外汇管制</a> <a href="/tags/多倍存款创造/" style="font-size: 10px;">多倍存款创造</a> <a href="/tags/大分水岭/" style="font-size: 10px;">大分水岭</a> <a href="/tags/大宪章/" style="font-size: 10px;">大宪章</a> <a href="/tags/大萧条/" style="font-size: 10px;">大萧条</a> <a href="/tags/大革命/" style="font-size: 10px;">大革命</a> <a href="/tags/奢侈/" style="font-size: 10px;">奢侈</a> <a href="/tags/委托-代理人理论/" style="font-size: 10px;">委托-代理人理论</a> <a href="/tags/威尼斯/" style="font-size: 10px;">威尼斯</a> <a href="/tags/存款准备金/" style="font-size: 10px;">存款准备金</a> <a href="/tags/存款准备金率/" style="font-size: 10px;">存款准备金率</a> <a href="/tags/宋代/" style="font-size: 10px;">宋代</a> <a href="/tags/完全信息/" style="font-size: 10px;">完全信息</a> <a href="/tags/完美信息/" style="font-size: 10px;">完美信息</a> <a href="/tags/宗教改革/" style="font-size: 10px;">宗教改革</a> <a href="/tags/实干/" style="font-size: 10px;">实干</a> <a href="/tags/实用主义/" style="font-size: 10px;">实用主义</a> <a href="/tags/宪政民主/" style="font-size: 10px;">宪政民主</a> <a href="/tags/寡头/" style="font-size: 10px;">寡头</a> <a href="/tags/对外直接投资/" style="font-size: 10px;">对外直接投资</a> <a href="/tags/就业/" style="font-size: 10px;">就业</a> <a href="/tags/工业化/" style="font-size: 13.33px;">工业化</a> <a href="/tags/工业革命/" style="font-size: 10px;">工业革命</a> <a href="/tags/工资/" style="font-size: 10px;">工资</a> <a href="/tags/市场/" style="font-size: 10px;">市场</a> <a href="/tags/市场失灵/" style="font-size: 10px;">市场失灵</a> <a href="/tags/市场效率/" style="font-size: 10px;">市场效率</a> <a href="/tags/市场秩序/" style="font-size: 10px;">市场秩序</a> <a href="/tags/市场经济/" style="font-size: 10px;">市场经济</a> <a href="/tags/市场进入/" style="font-size: 10px;">市场进入</a> <a href="/tags/市民社会/" style="font-size: 10px;">市民社会</a> <a href="/tags/布罗代尔钟罩/" style="font-size: 13.33px;">布罗代尔钟罩</a> <a href="/tags/希伯来/" style="font-size: 10px;">希伯来</a> <a href="/tags/希腊/" style="font-size: 10px;">希腊</a> <a href="/tags/开放/" style="font-size: 10px;">开放</a> <a href="/tags/引力模型/" style="font-size: 10px;">引力模型</a> <a href="/tags/弗里德曼/" style="font-size: 13.33px;">弗里德曼</a> <a href="/tags/弹性/" style="font-size: 10px;">弹性</a> <a href="/tags/德国/" style="font-size: 16.67px;">德国</a> <a href="/tags/总供给/" style="font-size: 13.33px;">总供给</a> <a href="/tags/总支出/" style="font-size: 10px;">总支出</a> <a href="/tags/总需求/" style="font-size: 13.33px;">总需求</a> <a href="/tags/惠伦/" style="font-size: 10px;">惠伦</a> <a href="/tags/成本/" style="font-size: 10px;">成本</a> <a href="/tags/户籍制度/" style="font-size: 10px;">户籍制度</a> <a href="/tags/托宾/" style="font-size: 10px;">托宾</a> <a href="/tags/投机动机/" style="font-size: 10px;">投机动机</a> <a href="/tags/抵押补充贷款/" style="font-size: 10px;">抵押补充贷款</a> <a href="/tags/拉丁效应/" style="font-size: 10px;">拉丁效应</a> <a href="/tags/拉尼斯—费景汉模型/" style="font-size: 10px;">拉尼斯—费景汉模型</a> <a href="/tags/收入差距/" style="font-size: 10px;">收入差距</a> <a href="/tags/改革/" style="font-size: 10px;">改革</a> <a href="/tags/政府干预/" style="font-size: 10px;">政府干预</a> <a href="/tags/政治自由/" style="font-size: 10px;">政治自由</a> <a href="/tags/文献/" style="font-size: 10px;">文献</a> <a href="/tags/斯密动态经济增长/" style="font-size: 13.33px;">斯密动态经济增长</a> <a href="/tags/斯密型动态经济增长/" style="font-size: 13.33px;">斯密型动态经济增长</a> <a href="/tags/施蒂格勒/" style="font-size: 10px;">施蒂格勒</a> <a href="/tags/无息债券/" style="font-size: 10px;">无息债券</a> <a href="/tags/无贸易模型/" style="font-size: 10px;">无贸易模型</a> <a href="/tags/日耳曼公社/" style="font-size: 10px;">日耳曼公社</a> <a href="/tags/明清/" style="font-size: 10px;">明清</a> <a href="/tags/晚清停滞/" style="font-size: 10px;">晚清停滞</a> <a href="/tags/李嘉图模型/" style="font-size: 10px;">李嘉图模型</a> <a href="/tags/李约瑟之谜/" style="font-size: 10px;">李约瑟之谜</a> <a href="/tags/条顿/" style="font-size: 10px;">条顿</a> <a href="/tags/杨小凯/" style="font-size: 10px;">杨小凯</a> <a href="/tags/杨格/" style="font-size: 10px;">杨格</a> <a href="/tags/桑巴特/" style="font-size: 10px;">桑巴特</a> <a href="/tags/次贷危机/" style="font-size: 10px;">次贷危机</a> <a href="/tags/比较优势/" style="font-size: 10px;">比较优势</a> <a href="/tags/比较经济学/" style="font-size: 10px;">比较经济学</a> <a href="/tags/法制/" style="font-size: 10px;">法制</a> <a href="/tags/法国/" style="font-size: 16.67px;">法国</a> <a href="/tags/法治/" style="font-size: 10px;">法治</a> <a href="/tags/泡沫/" style="font-size: 13.33px;">泡沫</a> <a href="/tags/流动性偏好/" style="font-size: 13.33px;">流动性偏好</a> <a href="/tags/流动性陷阱/" style="font-size: 10px;">流动性陷阱</a> <a href="/tags/涓流效应/" style="font-size: 10px;">涓流效应</a> <a href="/tags/涩泽荣一/" style="font-size: 10px;">涩泽荣一</a> <a href="/tags/熊彼特/" style="font-size: 10px;">熊彼特</a> <a href="/tags/特定要素模型/" style="font-size: 10px;">特定要素模型</a> <a href="/tags/狄索托/" style="font-size: 10px;">狄索托</a> <a href="/tags/理性预期/" style="font-size: 10px;">理性预期</a> <a href="/tags/生产/" style="font-size: 10px;">生产</a> <a href="/tags/皇权/" style="font-size: 10px;">皇权</a> <a href="/tags/监管/" style="font-size: 10px;">监管</a> <a href="/tags/相机抉择/" style="font-size: 10px;">相机抉择</a> <a href="/tags/矩阵分析法/" style="font-size: 10px;">矩阵分析法</a> <a href="/tags/种类偏好/" style="font-size: 10px;">种类偏好</a> <a href="/tags/科斯/" style="font-size: 10px;">科斯</a> <a href="/tags/移民/" style="font-size: 10px;">移民</a> <a href="/tags/税收/" style="font-size: 10px;">税收</a> <a href="/tags/竞争/" style="font-size: 20px;">竞争</a> <a href="/tags/算盘/" style="font-size: 10px;">算盘</a> <a href="/tags/纳什均衡/" style="font-size: 10px;">纳什均衡</a> <a href="/tags/经济危机/" style="font-size: 10px;">经济危机</a> <a href="/tags/经济发展/" style="font-size: 10px;">经济发展</a> <a href="/tags/经济增长/" style="font-size: 10px;">经济增长</a> <a href="/tags/经济科学/" style="font-size: 10px;">经济科学</a> <a href="/tags/绝对优势/" style="font-size: 10px;">绝对优势</a> <a href="/tags/缓冲存货模型/" style="font-size: 10px;">缓冲存货模型</a> <a href="/tags/缩表/" style="font-size: 10px;">缩表</a> <a href="/tags/罗马/" style="font-size: 13.33px;">罗马</a> <a href="/tags/美联储/" style="font-size: 16.67px;">美联储</a> <a href="/tags/联邦储备银行/" style="font-size: 10px;">联邦储备银行</a> <a href="/tags/联邦基金利率/" style="font-size: 10px;">联邦基金利率</a> <a href="/tags/肯尼迪/" style="font-size: 10px;">肯尼迪</a> <a href="/tags/腐败/" style="font-size: 10px;">腐败</a> <a href="/tags/自发秩序/" style="font-size: 10px;">自发秩序</a> <a href="/tags/节俭/" style="font-size: 10px;">节俭</a> <a href="/tags/英国/" style="font-size: 16.67px;">英国</a> <a href="/tags/荷兰/" style="font-size: 10px;">荷兰</a> <a href="/tags/菲律普斯曲线/" style="font-size: 10px;">菲律普斯曲线</a> <a href="/tags/衍生品/" style="font-size: 10px;">衍生品</a> <a href="/tags/西方兴起/" style="font-size: 16.67px;">西方兴起</a> <a href="/tags/西汉/" style="font-size: 10px;">西汉</a> <a href="/tags/要素/" style="font-size: 10px;">要素</a> <a href="/tags/要素价格均等化定理/" style="font-size: 10px;">要素价格均等化定理</a> <a href="/tags/要素贸易/" style="font-size: 10px;">要素贸易</a> <a href="/tags/规模报酬递增/" style="font-size: 10px;">规模报酬递增</a> <a href="/tags/论语/" style="font-size: 10px;">论语</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a> <a href="/tags/诺斯/" style="font-size: 10px;">诺斯</a> <a href="/tags/财政分权/" style="font-size: 10px;">财政分权</a> <a href="/tags/财政政策/" style="font-size: 10px;">财政政策</a> <a href="/tags/货币/" style="font-size: 16.67px;">货币</a> <a href="/tags/货币乘数/" style="font-size: 10px;">货币乘数</a> <a href="/tags/货币供应/" style="font-size: 10px;">货币供应</a> <a href="/tags/货币失踪/" style="font-size: 10px;">货币失踪</a> <a href="/tags/货币层次/" style="font-size: 10px;">货币层次</a> <a href="/tags/货币总量/" style="font-size: 10px;">货币总量</a> <a href="/tags/货币政策/" style="font-size: 13.33px;">货币政策</a> <a href="/tags/货币数量说/" style="font-size: 10px;">货币数量说</a> <a href="/tags/货币理论/" style="font-size: 10px;">货币理论</a> <a href="/tags/货币经济/" style="font-size: 10px;">货币经济</a> <a href="/tags/货币需求/" style="font-size: 10px;">货币需求</a> <a href="/tags/贫困/" style="font-size: 10px;">贫困</a> <a href="/tags/贴现贷款/" style="font-size: 10px;">贴现贷款</a> <a href="/tags/贸易/" style="font-size: 10px;">贸易</a> <a href="/tags/贸易利得/" style="font-size: 13.33px;">贸易利得</a> <a href="/tags/贸易方式/" style="font-size: 10px;">贸易方式</a> <a href="/tags/资产负债表/" style="font-size: 16.67px;">资产负债表</a> <a href="/tags/资本/" style="font-size: 10px;">资本</a> <a href="/tags/资本主义精神/" style="font-size: 10px;">资本主义精神</a> <a href="/tags/资本收入/" style="font-size: 10px;">资本收入</a> <a href="/tags/资本流动/" style="font-size: 10px;">资本流动</a> <a href="/tags/资本积累/" style="font-size: 10px;">资本积累</a> <a href="/tags/逆回购/" style="font-size: 10px;">逆回购</a> <a href="/tags/通胀目标制/" style="font-size: 10px;">通胀目标制</a> <a href="/tags/通货膨胀/" style="font-size: 10px;">通货膨胀</a> <a href="/tags/配额/" style="font-size: 10px;">配额</a> <a href="/tags/里昂惕夫之谜/" style="font-size: 10px;">里昂惕夫之谜</a> <a href="/tags/重农抑商/" style="font-size: 13.33px;">重农抑商</a> <a href="/tags/重复博弈/" style="font-size: 10px;">重复博弈</a> <a href="/tags/重工业优先发展战略/" style="font-size: 10px;">重工业优先发展战略</a> <a href="/tags/量化宽松/" style="font-size: 10px;">量化宽松</a> <a href="/tags/金本位/" style="font-size: 10px;">金本位</a> <a href="/tags/金融危机/" style="font-size: 10px;">金融危机</a> <a href="/tags/金融市场/" style="font-size: 10px;">金融市场</a> <a href="/tags/隋唐/" style="font-size: 10px;">隋唐</a> <a href="/tags/隧道效应/" style="font-size: 10px;">隧道效应</a> <a href="/tags/集权/" style="font-size: 10px;">集权</a> <a href="/tags/需求/" style="font-size: 10px;">需求</a> <a href="/tags/非股权安排/" style="font-size: 10px;">非股权安排</a> <a href="/tags/韦伯/" style="font-size: 10px;">韦伯</a> <a href="/tags/预算赤字/" style="font-size: 10px;">预算赤字</a> <a href="/tags/预防动机/" style="font-size: 10px;">预防动机</a> <a href="/tags/马克思/" style="font-size: 13.33px;">马克思</a> <a href="/tags/鲍莫尔/" style="font-size: 10px;">鲍莫尔</a> <a href="/tags/麦克勒姆/" style="font-size: 10px;">麦克勒姆</a> <a href="/tags/黄有光/" style="font-size: 10px;">黄有光</a> <a href="/tags/黑格尔/" style="font-size: 10px;">黑格尔</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>链接</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://sitstars.com" rel="external nofollow noopener noreferrer" target="_blank">blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://tool.sitstars.com" rel="external nofollow noopener noreferrer" target="_blank">工具</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-金融学/固定收益" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/金融学/">金融学</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/伊藤积分/">伊藤积分</a>, <a class="tag-link" href="/tags/利率/">利率</a>, <a class="tag-link" href="/tags/固定收益/">固定收益</a>, <a class="tag-link" href="/tags/无息债券/">无息债券</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/金融学/固定收益/">
+            <time datetime="2019-12-29T04:11:47.000Z" itemprop="datePublished">2019-12-29</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/raw/master/_posts/金融学/固定收益.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/edit/master/_posts/金融学/固定收益.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/caly5144/wiki/commits/master/_posts/金融学/固定收益.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            固定收益及衍生品
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#利率和银行账户"><span class="toc-number">1.</span> <span class="toc-text">利率和银行账户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#银行存款"><span class="toc-number">1.1.</span> <span class="toc-text">银行存款</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#现金流的折现值"><span class="toc-number">1.2.</span> <span class="toc-text">现金流的折现值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#债券"><span class="toc-number">2.</span> <span class="toc-text">债券</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无息债"><span class="toc-number">2.1.</span> <span class="toc-text">无息债</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收益率"><span class="toc-number">2.2.</span> <span class="toc-text">收益率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#久期和凸性"><span class="toc-number">2.3.</span> <span class="toc-text">久期和凸性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#债券价格转换"><span class="toc-number">2.4.</span> <span class="toc-text">债券价格转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无套利条件"><span class="toc-number">2.5.</span> <span class="toc-text">无套利条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#即期收益率曲线"><span class="toc-number">2.6.</span> <span class="toc-text">即期收益率曲线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利率远期"><span class="toc-number">3.</span> <span class="toc-text">利率远期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#商品和股票远期合同"><span class="toc-number">3.1.</span> <span class="toc-text">商品和股票远期合同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利率远期合同"><span class="toc-number">3.2.</span> <span class="toc-text">利率远期合同</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利率掉期"><span class="toc-number">4.</span> <span class="toc-text">利率掉期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利率掉期曲线"><span class="toc-number">4.1.</span> <span class="toc-text">利率掉期曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利率远期掉期"><span class="toc-number">4.2.</span> <span class="toc-text">利率远期掉期</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机过程和-itô-引理"><span class="toc-number">5.</span> <span class="toc-text">随机过程和 Itô 引理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#期望与方差"><span class="toc-number">5.1.</span> <span class="toc-text">期望与方差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布朗运动"><span class="toc-number">5.2.</span> <span class="toc-text">布朗运动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#itô-积分"><span class="toc-number">5.3.</span> <span class="toc-text">Itô 积分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#性质"><span class="toc-number">5.3.1.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#伊藤引理"><span class="toc-number">5.3.2.</span> <span class="toc-text">伊藤引理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">5.3.3.</span> <span class="toc-text">例子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bdt模型"><span class="toc-number">6.</span> <span class="toc-text">BDT模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#理论基础"><span class="toc-number">6.1.</span> <span class="toc-text">理论基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过程"><span class="toc-number">6.2.</span> <span class="toc-text">过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cap和floor"><span class="toc-number">6.3.</span> <span class="toc-text">CAP和Floor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hull-white模型"><span class="toc-number">7.</span> <span class="toc-text">Hull-White模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#理论基础-1"><span class="toc-number">7.1.</span> <span class="toc-text">理论基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模拟"><span class="toc-number">7.2.</span> <span class="toc-text">模拟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#各类衍生品计算"><span class="toc-number">7.3.</span> <span class="toc-text">各类衍生品计算</span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="利率和银行账户">利率和银行账户</h2>
+<h3 id="银行存款">银行存款</h3>
+<p><strong>离散复利</strong></p>
+<p><span class="math display">\[P_i = {1\over (1+r)^i}\]</span></p>
+<p><strong>连续复利</strong></p>
+<ul>
+<li>利率为常数。当到期时间为t时，连续复利计息下的银行账户为：</li>
+</ul>
+<p><span class="math display">\[\lim_{n\to\infty}(1+{r\over n})^{nt}=e^{rt}\]</span></p>
+<p>因此，折现值为<span class="math inline">\(e^{-rt}\)</span></p>
+<ul>
+<li>利率为随机变量。当利率是时间的函数时，短期利率为r(s)，此时银行账户为：</li>
+</ul>
+<p><span class="math display">\[e ^{\left( \int _ { 0 } ^ { t } r ( s ) d s \right)}\]</span></p>
+<p>折现值为：</p>
+<p><span class="math display">\[e ^{\left( -\int _ { 0 } ^ { t } r ( s ) d s \right)}\]</span></p>
+<h3 id="现金流的折现值">现金流的折现值</h3>
+<p>假设时刻t的现金流为ci，折现值为pi，那么，未来现金流的折现值就是</p>
+<p><span class="math display">\[p_1c_1+p_2c_2+…+p_nc_n\]</span></p>
+<p>这个值又被称为现金流的净现值 (Net Present Value)。</p>
+<p><strong>一个例子</strong>是，永久年金产品(一种退休养老金产品)，每年都需要支付等量现金 c。如果假定贴现利率为 r，并按连续复利计算贴现之后，所有未来现金流的净现值将成为</p>
+<p><span class="math display">\[c e ^ { - r } + c e ^ { - 2 r } + \cdots + c e ^ { - n r } + \cdots = \frac { c e ^ { - r } } { 1 - e ^ { - r } }\]</span></p>
+<p>在离散复利计息条件下，永久年金净现值为</p>
+<p><span class="math display">\[\sum _ { k = 1 } ^ { \infty } \frac { c } { ( 1 + r ) ^ { k } } = \frac { c } { r }\]</span></p>
+<h2 id="债券">债券</h2>
+<h3 id="无息债">无息债</h3>
+<p>当期价格即连续复利下的折现值，注意当利率是随机变量时，要取期望。</p>
+<p><span class="math display">\[B ( 0 , t ) = E \left( e ^ { - \int _ { 0 } ^ { t } r ( s ) d s } \right) = e ^ { - r ( 0 , t ) t }\]</span></p>
+<p>问：为什么不取期望的倒数？而是倒数的期望？</p>
+<h3 id="收益率">收益率</h3>
+<ul>
+<li>名义收益率：即每年的利息率</li>
+<li>当期收益率：利息率/实际交易价格</li>
+<li>到期收益率：即令现金流的净现值等于今天价格的利率（就是复利下的利率，注意最后一期要加上本金的折现）。它的含义是假设以后任何时候收到的现金都可以以同样的利率再投资，直到把本金完全收回为止。</li>
+</ul>
+<p>一个平价债券，有：</p>
+<p><span class="math display">\[1 = \frac { r } { ( 1 + r ) } + \frac { r } { ( 1 + r ) ^ { 2 } } + \cdots + \frac { 1 + r } { ( 1 + r ) ^ { n } }\]</span></p>
+<p>这个等式就说明一个<strong>平值债券的到期收益率就等于其名义收益率</strong>也等于其表面利率。据此也容易看出来，在债券价格小于面值时，到期收益率大于票面利息，在债券价格大于面值时，到期收益率小于票面利息。</p>
+<h3 id="久期和凸性">久期和凸性</h3>
+<p>久期：如果回报率变化，债券价格会怎么变化？</p>
+<p>定义一个价格关于回报率的函数（即债券价格与到期收益率的关系）：</p>
+<p><span class="math display">\[f(r) = e ^ { - r t _ { 1 } } c _ { 1 } + e ^ { - r t _ { 2 } } c _ { 2 } + \cdots + e ^ { - r t _ { n } } c _ { n }\]</span></p>
+<p>则久期为：</p>
+<p><span class="math display">\[-{f^{&#39;}(r)\over f(r)}=\frac { t _ { 1 } e ^ { - r t _ { 1 } } c _ { 1 } + t _ { 2 } e ^ { - r t _ { 2 } } c _ { 2 } + \cdots + t _ { n } e ^ { - r t _ { n } } c _ { n } } { e ^ { - r t _ { 1 } c _ { 1 } + e ^ { - r t _ { 2 } } c _ { 2 } + \cdots + e ^ { - r t _ { n } c _ { n } } } }\]</span></p>
+<p>凸性为：</p>
+<p><span class="math display">\[\frac { 1 } { 2 } {f ^ { \prime \prime }( r )\over f(r)}\]</span></p>
+<p><span class="math display">\[\triangle P/P={f^{&#39;}(r)\over f(r)}\triangle r +{1\over2} {f ^ { \prime \prime }( r )\over f(r)} \times (\triangle r)^2\]</span></p>
+<p>可以看出，这就是泰勒展开的变体（注意，如果直接给出久期，那么需要加个负号才能用）。</p>
+<p><strong>无息债券的久期就是债券的到期时间</strong>。这也是久期这个名词的来历之一。但是当债券不是一个无息债券的时候，显然，久期不等于债权到期的时间。实际上，因为有息债券也可以看成是许多无息债券的组合，所以有息债券的久期其实是所有的这些无息债券的久期的加权平均。无息债券的凸性就是<strong>到期时间的平方</strong>。</p>
+<h3 id="债券价格转换">债券价格转换</h3>
+<p><span class="math display">\[\left( \begin{array} { c } { P _ { 1 } } \\ { P _ { 2 } } \\ { \vdots } \\ { P _ { 10 } } \end{array} \right) = \left( \begin{array} { c c c c } { 1 + c _ { 1 } } &amp; { } &amp; { } &amp; { } \\ { c _ { 2 } } &amp; { 1 + c _ { 2 } } &amp; { } &amp; { } \\ { \cdots } &amp; { \cdots } &amp; { \cdots } &amp; { \cdots } \\ { c _ { 10 } } &amp; { c _ { 10 } } &amp; { \cdots } &amp; { 1 + c _ { 10 } } \end{array} \right) \left( \begin{array} { c } { B _ { 1 } } \\ { B _ { 2 } } \\ { \vdots } \\ { B _ { 10 } } \end{array} \right)\]</span></p>
+<p>一旦有了无息债券的价格，平价债券的息票信息也一样可以得到。因为平价债券的价格是 1，假设它的息票为 c，那么应该有方程</p>
+<p><span class="math display">\[1 = c \cdot B _ { 1 } + c \cdot B _ { 2 } + \cdots ( 1 + c ) B _ { 10 }\]</span></p>
+<p>所以得到</p>
+<p><span class="math display">\[c = \frac { 1 - B _ { 10 } } { B _ { 1 } + B _ { 2 } + \cdots + B _ { 10 } }\]</span></p>
+<h3 id="无套利条件">无套利条件</h3>
+<p>债券无套利的充分必要条件是所有无息债券价格满足：</p>
+<p><span class="math display">\[0 &lt; B(0, T)&lt; 1\]</span></p>
+<p>同时函数<span class="math inline">\(B(0,T)\)</span>按照时间递减。</p>
+<h3 id="即期收益率曲线">即期收益率曲线</h3>
+<p><strong>无息债券的到期收益率就是即期收益率</strong>，为</p>
+<p><span class="math display">\[\sqrt[n]{ {100\over P_0}-1}\]</span></p>
+<p>设 Y(t,T)是到期收益率，r(s)是短期利率函数，首先我们有：</p>
+<p><span class="math display">\[B ( t , T ) = e ^ { - Y ( t , T ) ( T - t ) }\]</span></p>
+<p>求导得：</p>
+<p><span class="math display">\[\begin{aligned} \frac { \partial } { \partial T } B ( t , T ) = - B ( t , T ) \left( Y _ { T } ( t , T ) ( T - t ) + Y ( t , T ) \right) \end{aligned}\]</span></p>
+<p>其中<span class="math inline">\(Y_T(t,T)\)</span>是<span class="math inline">\(Y(t,T)\)</span>对T求导的意思</p>
+<p>从而：</p>
+<p><span class="math display">\[\lim _ { t \rightarrow T } \frac { \partial } { \partial T } B ( t , T ) = - Y ( t , t )\]</span></p>
+<p>将连续复利随机变量函数代入，有：</p>
+<p><span class="math display">\[B ( t , T ) = E ( e ^ { - \int _ { t } ^ { T } r ( s ) d s  } )\]</span></p>
+<p>求导得：</p>
+<p><span class="math display">\[\begin{aligned} \frac { \partial } { \partial T } B ( t , T ) &amp; = E \left( - r ( T ) e ^ { - \int _ { t } ^ { T } r ( u ) d u } | \mathscr { F } _ { t } \right) \end{aligned}\]</span></p>
+<p>从而：</p>
+<p><span class="math display">\[\lim _ { T \rightarrow t } \frac { \partial } { \partial T } B ( t , T ) = - r ( t )\]</span></p>
+<p>从而我们有<span class="math inline">\(r ( t ) = Y ( t , t )\)</span></p>
+<p>这就说明了短期利率和即期利率之间的关系。简单说，从无息债券价格中，我们有不同到期时间的即期的利率曲线。即期利率曲线的时间趋向于零就是短期瞬时利率。</p>
+<h2 id="利率远期">利率远期</h2>
+<h3 id="商品和股票远期合同">商品和股票远期合同</h3>
+<p><span class="math inline">\(S_T\)</span>是市价，K是执行价格，则</p>
+<p><span class="math display">\[远期收益 =S_T-K\]</span></p>
+<p><strong>远期在初始点是没有现金流的，交易双方都不会给对方任何的现金作为购买远期的费用。</strong>这是因为在初始点远期合约是公平的，其公平性隐涵于远期的价格 FT（<span class="math inline">\(F_T=K\)</span>） 上。这个价格是交易市场交易的结果，并不是人为制定的。</p>
+<p>一般的远期合同是签订合同的一方向另一方支付抵押金，抵押金的金额由市场的变化程度和方向来决定。比如签订合约后第二天，市场价格对乙方有利，那么甲方要向一方支付抵押金，其目的是为了减少由于信誉带来的风险。</p>
+<p><strong>远期的交易价格原理</strong></p>
+<p>如果简单复利利率是 r，股票或者股票指数的现值是 S0，它们的在时刻 0 交易的关于时间 T 的远期价格都将是</p>
+<p><span class="math display">\[F _ { T } = S _ { 0 } ( 1 + r T )\]</span></p>
+<p>如果等式不成立，那么就会存在套利（Arbitrage）机会，市场行为会使远期价格回归到无套利价格。这个等式有以下假定条件：</p>
+<p>(1)股票交易是没有成本的；(2)卖空是可能的而且不需追加费用；(3)借出与借入的利息是一致的；(4)所有的参与交易者之间没有任何信用风险。</p>
+<p>农产品和自然资源远期就并不满足这些假定。因为首先农产品对于交割物有具体要求。第二，一般也无法卖空玉米、谷类、石油的。最后我们长时间贮存这些商品也会增加开支。所以不满足上述等式。</p>
+<h3 id="利率远期合同">利率远期合同</h3>
+<p>甲方付远期浮动利率r，乙方付固定利率K。如何求K？现金流复制</p>
+<ul>
+<li>第一类合同与复制</li>
+</ul>
+<p><img src="https://im.yanshu.work/article/20191222204106295_27022.png"></p>
+<p>则有</p>
+<p><span class="math display">\[K=\frac { B ( t , T ) - B ( t , T + \Delta T ) } { B ( t , T + \Delta T ) \Delta T }\]</span></p>
+<ul>
+<li>第二类合同与复制</li>
+</ul>
+<p>远期利率合约中的利率在时刻 T 才能够从市场上得到，同时利用无息债券价格的记号就是</p>
+<p><span class="math display">\[r = \frac { 1 - B ( T , T + \Delta T ) } { B ( T , T + \Delta T ) \Delta T }\]</span></p>
+<p>这个利率在远期利率合约中被交换，但是要在时刻<span class="math inline">\(T + \Delta T\)</span>完成，交换的现金流为：</p>
+<p><span class="math display">\[(r-K)\Delta T\]</span></p>
+<p>如果我们把这个现金流折现到时刻 T ，那么就是</p>
+<p><span class="math display">\[B ( T , T + \Delta T ) ( r - K ) \Delta T = 1 - B ( T , T + \Delta T ) - K B ( T , T + \Delta T ) \Delta T\]</span></p>
+<p>注意到这个等式右边可以看成为可以交易债券的组合。这些债券分别是时刻 T 到期和时刻<span class="math inline">\(T + \Delta T\)</span>到期的无息债券的价格。为了构造这些现金流在时刻 T 的价值，我们应该在时刻 t 就构造这些债券组合，它们的价格在时刻 t 的值就是</p>
+<p><span class="math display">\[B ( t , T ) - B ( t , T + \Delta T ) - K B ( t , T + \Delta T ) \Delta T\]</span></p>
+<p>为了让这个价格为零，所以我们应该有：</p>
+<p><span class="math display">\[K = \frac { B ( t , T ) - B ( t , T + \Delta T ) } { B ( t , T + \Delta T ) \Delta T }\]</span></p>
+<h2 id="利率掉期">利率掉期</h2>
+<p>一个三月一付的合约，合约签订开始的当天，三个月的 LIBOR 就得以确定，但是支付却需要等待三个月以后。这点很重要</p>
+<h3 id="利率掉期曲线">利率掉期曲线</h3>
+<p>我们假定每次 LIBOR 的利率分别是<span class="math inline">\(L _ { 1 } , L _ { 2 } , \ldots , L _ { n }\)</span></p>
+<p>其中 Li 是跨越 i-1 到 i 年的 LIBOR 利率（浮动端），K是固定利率。那么未来浮动利率和互换到期时的本金折现值为：</p>
+<p><span class="math display">\[\frac { L _ { 1 } } { 1 + L _ { 1 } } + \frac { L _ { 2 } } { \left( 1 + L _ { 1 } \right) \left( 1 + L _ { 2 } \right) } + \cdots + \frac { 1 + L _ { n } } { \left( 1 + L _ { 1 } \right) \cdots \left( 1 + L _ { n } \right) } = 1\]</span></p>
+<p>既然利率掉期是不用支付费用的合约，所以在利率掉期进入的那一刻，固定利率部分现金流的折现值也应该是本金那么多。这样就得到了一个重要的信息：即一个<strong>n年到期的利率掉期的固定利率就是一个平价债券的利息</strong>。</p>
+<p><span class="math display">\[K \left( B \left( t , t _ { 1 } \right) + \cdots + B \left( t , t _ { n } \right) \right) + B \left( t , t _ { n } \right) = 1\]</span></p>
+<p>这样就有：</p>
+<p><span class="math display">\[K = \frac { 1 - B \left( t , t _ { n } \right) } { B \left( t , t _ { 1 } \right) + \cdots + B \left( t , t _ { n } \right) }\]</span></p>
+<p>如从<span class="math inline">\(t_{i-1}\)</span>到 ti 的天数是<span class="math inline">\(\beta \left( t _ { i - 1 } , t _ { i } \right)\)</span>，则有：</p>
+<p><span class="math display">\[K = \frac { 1 - B \left( 0 , t _ { n } \right) } { \beta \left( t _ { 0 } , t _ { 1 } \right) B \left( 0 , t _ { 1 } \right) + \beta \left( t _ { 1 } , t _ { 2 } \right) B \left( 0 , t _ { 2 } \right) + \cdots + B \left( 0 , t _ { n } \right) \beta \left( t _ { n - 1 } , t _ { n } \right) }\]</span></p>
+<h3 id="利率远期掉期">利率远期掉期</h3>
+<p>即利率掉期不在当前就进行互换，而是像远期一样到一定时间点才互换</p>
+<p>合同规定，现在时间点为0，在未来的时间点 t0 可以进入一个时间在 tn 结束的利率掉期。这个利率掉期在未来时间 t0 开始，固定的利率为 K。这个利率称为远期利率掉期利率。</p>
+<p>在今天给出来完整的利率曲线以及折现值B(0,t) 以后，我们来计算出远期利率掉期利率的合理价值。首先浮动端我们使用利率互换来替代（见利率远期一节），t0时刻价值为1，折现到今天为<span class="math inline">\(B(0,t_0)\)</span></p>
+<p><span class="math display">\[\sum _ { i = 1 } ^ { n } B \left( 0 , t _ { i } \right) \frac { B \left( 0 , t _ { i - 1 } \right) - B \left( 0 , t _ { i } \right) } { B \left( 0 , t _ { i } \right) }+B(0,t_n) = B \left( 0 , t _ { 0 } \right)\]</span></p>
+<p>因为所有的固定端的现金流价值总和加上最后的面值是</p>
+<p><span class="math display">\[K \beta \left( t _ { 0 } , t _ { 1 } \right) B \left( 0 , t _ { 1 } \right) + \cdots + K \beta \left( t _ { n - 1 } , t _ { n } \right) B \left( 0 , t _ { n } \right) + B \left( 0 , t _ { n } \right)\]</span></p>
+<p>这样一来，我们看到远期利率掉期的利率为</p>
+<p><span class="math display">\[K = \frac { B \left( 0 , t _ { 0 } \right) - B \left( 0 , t _ { n } \right) } { \beta \left( t _ { 0 } , t _ { 1 } \right) B \left( 0 , t _ { 1 } \right) + \cdots + \beta \left( t _ { n - 1 } , t _ { n } \right) B \left( 0 , t _ { n } \right) }\]</span></p>
+<h2 id="随机过程和-itô-引理">随机过程和 Itô 引理</h2>
+<h3 id="期望与方差">期望与方差</h3>
+<p><strong>期望性质</strong></p>
+<p><span class="math display">\[E(X_1+X_2)=E(X_1)+E(X_2)\]</span></p>
+<p><strong>方差</strong></p>
+<p><span class="math display">\[D ( X ) = E \left[ ( X - E ( X ) ) ^ { 2 } \right]\]</span></p>
+<p><span class="math display">\[D ( X ) = E \left( X ^ { 2 } \right) - [ E ( X ) ] ^ { 2 }\]</span></p>
+<p><span class="math display">\[\boldsymbol { D } ( \boldsymbol { a } \boldsymbol { \xi } + \boldsymbol { b } ) = \boldsymbol { a } ^ { 2 } \boldsymbol { D } \boldsymbol { \xi }\]</span></p>
+<p><strong>协方差</strong></p>
+<p><span class="math display">\[cov(x,y)=E [ ( X - E ( X ) ) ( Y - E ( Y ) ) ]=E(XY)-E(X)E(Y)\]</span></p>
+<p><span class="math display">\[cov（x+y,z）=cov(x,z)+cov(y,z)\]</span></p>
+<p><span class="math display">\[D ( X + Y ) = D ( X ) + D ( Y ) + 2 \operatorname { Cov } ( X , Y )\]</span></p>
+<p><strong>相关系数</strong></p>
+<p><span class="math display">\[r ( X , Y ) = \frac { \operatorname { Cov } ( X , Y ) } { \sqrt { \operatorname { D } [ X ] \operatorname { D } [ Y ] } }\]</span></p>
+<h3 id="布朗运动">布朗运动</h3>
+<p>过程 M是<strong>对称随机游动</strong> ，定义</p>
+<p><span class="math display">\[W _ { t } = \lim _ { n \rightarrow \infty } \frac { 1 } { \sqrt { n } } M _ { [ n t ] } = \lim _ { n \rightarrow \infty } \frac { \sqrt { t } } { \sqrt { n t } } M _ { [ n t ] }\]</span></p>
+<p>为<strong>布朗运动</strong>。<span class="math inline">\([nt]\)</span>表示不超过 nt 的最大整数。<strong>布朗运动是一个期望为0、方差为t的正态随机变量</strong>。</p>
+<p>对任意的<span class="math inline">\(r\le s\)</span>，均有<span class="math inline">\(W _ { t } - W _ { s }\)</span>独立于<span class="math inline">\(W_r\)</span>，且前者是<strong>期望为0、方差为t-s的正态随机变量</strong>。</p>
+<p>布朗运动有以下性质：</p>
+<p><strong>性质1</strong></p>
+<p>s&lt;t</p>
+<p><span class="math display">\[\begin{aligned} E \left( W _ { s } W _ { t } \right) &amp; = E \left( W _ { s } \left( W _ { t } - W _ { s } \right) + W _ { s } ^ { 2 } \right) \\ &amp; = E \left( W _ { s } \right) \cdot E \left( W _ { t } - W _ { s } \right) + E \left( W _ { s } ^ { 2 } \right) \\ &amp; = 0 + V \left( W _ { s } \right) \\ &amp; = s \end{aligned}\]</span></p>
+<p>其中，第二个等式利用了 Ws 和 Wt-Ws 的独立性。</p>
+<p>推广：</p>
+<p><span class="math display">\[cov(W_s,W_t)=cov(W_s,W_s+(W_t-W_s))\\=cov(W_s,W_s)+cov(W_s,W_t-W_s)\\=D(W_s)+E(W_s(W_t-W_s))\\=s\]</span></p>
+<p>因而有<span class="math inline">\(cov(W_s,W_t)=min\{s,t\}\)</span>，<span class="math inline">\(E(W_sW_t)=min\{s,t\}\)</span></p>
+<p><strong>性质2</strong></p>
+<p>对于任意一个连续函数<span class="math inline">\(f(t)\)</span>，它的二次变差为：</p>
+<p><span class="math display">\[\sum _ { i = 0 } ^ { N - 1 } \left[ f \left( t _ { i + 1 } \right) - f \left( t _ { i } \right) \right] ^ { 2 }\]</span></p>
+<p>W 为布朗运动，那么对几乎所有的 T &gt; 0，有<span class="math inline">\([ W , W ] ( T ) = T\)</span>，即任何时刻布朗运动的二次变差为T。</p>
+<h3 id="itô-积分">Itô 积分</h3>
+<p>设<span class="math inline">\(\Delta ( t )\)</span>为相适应的随机过程，则Itô 积分可定义为：</p>
+<p><span class="math display">\[I ( t ) = \int _ { 0 } ^ { t } \Delta ( u ) d W ( u )\]</span></p>
+<h4 id="性质">性质</h4>
+<p>Itô 积分有以下性质：</p>
+<p><strong>定理 1-伊藤公式 </strong>如果<span class="math inline">\(\Delta ( t )\)</span>对 t 是平方可积的，Itô 积分满足</p>
+<p><span class="math display">\[Var(I(t))=E \left( I ^ { 2 } ( t ) \right) = E \left( \int _ { 0 } ^ { t } \Delta ^ { 2 } ( u ) d u \right)\]</span></p>
+<p><strong>定理2</strong> 如果<span class="math inline">\(\Delta ( t )\)</span> 对 t 是平方可积的，那么 Itô 积分是鞅。且<span class="math inline">\(E(I(t))=0\)</span></p>
+<p><strong>定理3</strong> 时刻 t 的二次变差可以通过积分得到</p>
+<p><span class="math display">\[[ I , I ] ( t ) = \int _ { 0 } ^ { t } \Delta ^ { 2 } ( u ) d u\]</span></p>
+<h4 id="伊藤引理">伊藤引理</h4>
+<p><span class="math display">\[f(W_t)=f(0)+\int_0^Tf^{&#39;}(W_t)dW_t+\int_0^Tf^{&#39;}(t)dt+{1\over 2}\int_0^Tf^{&#39;&#39;}(W_t)d_t\]</span></p>
+<p><span class="math display">\[df={\partial f\over \partial W_t}dW_t+{\partial f\over \partial t}dt+{1\over 2}{\partial^2 f \over \partial W^2_t}dt\]</span></p>
+<h4 id="例子">例子</h4>
+<p><strong>例1</strong></p>
+<p><span class="math display">\[df=Adt+BdW_t\]</span></p>
+<p>则</p>
+<p><span class="math display">\[f=f(0)+At+BW_t\]</span></p>
+<p><strong>例2</strong></p>
+<p><span class="math display">\[df=A(t)dt+B(t)dW_t\]</span></p>
+<p>则</p>
+<p><span class="math display">\[f=f(0)+\int_0^tA(s)ds+\int_0^tB(s)dW_s\]</span></p>
+<p><strong>几何布朗运动</strong>：<span class="math inline">\(d S = \mu S d t + \sigma S d W\)</span></p>
+<p>为了解这个方程，我们需要利用 Itô 引理，对 log S 微分,</p>
+<p><span class="math display">\[\begin{aligned} d \log S &amp; = \frac { 1 } { S } d S - \frac { 1 } { 2 S ^ { 2 } } d S d S \\ &amp; = \mu d t + \sigma d W - \frac { 1 } { 2 } \sigma ^ { 2 } d t \\ &amp; = \left( \mu - \frac { 1 } { 2 } \sigma ^ { 2 } \right) d t + \sigma d W \end{aligned}\]</span></p>
+<blockquote>
+<p><span class="math inline">\(dW*dt\)</span>和<span class="math inline">\(dW^2\)</span>都是无穷小量，可以略去</p>
+</blockquote>
+<p>于是，我们有</p>
+<p><span class="math display">\[\log S _ { t } = \log S _ { 0 } + \left( \mu - \frac { 1 } { 2 } \sigma ^ { 2 } \right) t + \sigma W _ { t }\]</span></p>
+<p>去掉对数符号，则有</p>
+<p><span class="math display">\[S _ { t } = S _ { 0 } \exp \left( \left( \mu - \frac { 1 } { 2 } \sigma ^ { 2 } \right) t + \sigma W _ { t } \right)\]</span></p>
+<p>我们看到解在任何时刻的对数是一个正态分布，所以我们又称 St 为对数正态分布。</p>
+<p><strong>例4：</strong><span class="math inline">\(d r = ( \alpha - \beta r ) d t + \sigma d W _ { t }\)</span></p>
+<p>这个过程通常用来模拟利率过程。为了解这个方程，我们考虑</p>
+<p><span class="math display">\[\begin{aligned} d \left( e ^ { \beta t } r \right) &amp; = \beta e ^ { \beta t } r d t + e ^ { \beta t } d r \\ &amp; = \beta e ^ { \beta t } r d t + e ^ { \beta t } ( \alpha - \beta r ) d t + \sigma e ^ { \beta t } d W _ { t } \\ &amp; = \alpha e ^ { \beta t } d t + \sigma e ^ { \beta t } d W _ { t } \end{aligned}\]</span></p>
+<p>这样我们就可以给出一个解：</p>
+<p><span class="math display">\[\begin{aligned} e ^ { \beta t } r ( t ) &amp; = r ( 0 ) + \int _ { 0 } ^ { t } \alpha e ^ { \beta s } d s + \int _ { 0 } ^ { t } \sigma e ^ { \beta s } d W _ { s } \\ &amp; = r ( 0 ) + \frac { \alpha } { \beta } \left( e ^ { \beta t } - 1 \right) + \int _ { 0 } ^ { t } \sigma e ^ { \beta s } d W _ { s } \end{aligned}\]</span></p>
+<p>于是有</p>
+<p><span class="math display">\[r ( t ) = e ^ { - \beta t } r ( 0 ) + \frac { \alpha } { \beta } \left( 1 - e ^ { - \beta t } \right) + \int _ { 0 } ^ { t } \sigma e ^ { \beta ( s - t ) } d W _ { s }\]</span></p>
+<p>因为 Itô 积分</p>
+<p><span class="math display">\[\int _ { 0 } ^ { t } \sigma e ^ { \beta ( s - t ) } d W _ { s }\]</span></p>
+<p>是个正态分布，我们知道 r(t)必然也是个正态分布，并且根据定理3,</p>
+<p><span class="math display">\[\begin{aligned} E ( r ( t ) ) &amp; = e ^ { - \beta t } r ( 0 ) + \frac { \alpha } { \beta } \left( 1 - e ^ { - \beta t } \right) \\ V ( r ( t ) ) &amp; = \int _ { 0 } ^ { t } \sigma ^ { 2 } e ^ { 2 \beta ( s - t ) } d s = \frac { \sigma ^ { 2 } } { 2 \beta } \left( 1 - e ^ { - 2 \beta t } \right) \end{aligned}\]</span></p>
+<h2 id="bdt模型">BDT模型</h2>
+<h3 id="理论基础">理论基础</h3>
+<p>在 BDT 模型下，短期利率 rt 满足下面的过程</p>
+<p><span class="math display">\[d \log r _ { t } = \theta ( t ) d t + \sigma d W _ { t }\]</span></p>
+<p>其中<span class="math inline">\(\theta(t)\)</span>是一个依赖于时间 t 的函数。方程的解为：</p>
+<p><span class="math display">\[r ( t ) = r ( 0 ) e ^ { \int _ { 0 } ^ { t } \theta ( s ) d s + \sigma W _ { s } } = U ( t ) e ^ { \sigma W _ { t } }\]</span></p>
+<p>其中函数 U(t)满足常微分方程</p>
+<p><span class="math display">\[\frac { d \log U ( t ) } { d t } = \theta ( t )\]</span></p>
+<h3 id="过程">过程</h3>
+<p>1、<strong>设定一行初始的 U(t)与固定的sigma</strong></p>
+<p>2、<strong>种BDT利率树</strong></p>
+<p>一般来说，短期利率r在第n步上一共有n+1个节点，他们记号分别是r(n，0)，r(n，1)，…，r(n,n)，而且满足马尔可夫条件，他们分别是</p>
+<p><span class="math display">\[\left\{ \begin{array} { c c c } { r ( n , n ) } &amp; { = } &amp; { U ( n ) e ^ { n \sigma \sqrt { \Delta t } } } \\ { r ( n , n - 1 ) } &amp; { = } &amp; { U ( n ) e ^ { ( n - 2 ) \sigma \sqrt { \Delta t} } } \\ { } &amp; { \vdots } &amp; { } \\ { r ( n , 0 ) } &amp; { = } &amp; { U ( n ) e ^ { - n \sigma \sqrt { \Delta t } } } \end{array} \right.\]</span></p>
+<p><img src="https://im.yanshu.work/article/20191223110224792_11594.png"></p>
+<p>3、<strong>构造Debrew 折现值树</strong></p>
+<p><span class="math display">\[\left\{ \begin{array} { l } { D ( n , n ) = \frac { 1 } { 2 } \frac { D ( n - 1 , n - 1 ) } { 1 + r ( n - 1 , n - 1 ) \Delta t } } \\ { D ( n , j ) = \frac { 1 } { 2 } \frac { D ( n - 1 , j - 1 ) } { 1 + r ( n - 1 , j - 1 ) \Delta t } + \frac { 1 } { 2 } \frac { D ( n - 1 , j ) } { 1 + r ( n - 1 , j ) \Delta t } } \\ { D ( n , 0 ) = \frac { 1 } { 2 } \frac { D ( n - 1,0 ) } { 1 + r ( n - 1,0 ) \Delta t } } \end{array} \right.\]</span></p>
+<p>4、<strong>与真实折现值对比</strong></p>
+<p><span class="math display">\[\sum _ { j = 0 } ^ { n } D ( n , j ) = p ( n )\]</span></p>
+<p>一一使之相等，即可确认U(n)。就可以得到完整的 BDT 树同时也就得到相应的 Debrew 树。</p>
+<h3 id="cap和floor">CAP和Floor</h3>
+<p>对于一个利率的顶（CAP），比如一个在时间iΔt到期的跨越（i+1）Δt的短期利率看涨期权，行权价在K的定价就可以计算成为</p>
+<p><span class="math display">\[\sum _ { j = 0 } ^ { i } D ( i , j ) \frac { ( r ( i , j ) - K ) ^ { + } \Delta t } { 1 + r ( i , j ) \Delta t }\]</span></p>
+<p>底的话，即</p>
+<p><span class="math display">\[\sum _ { j = 0 } ^ { i } D ( i , j ) \frac { (K-r ( i , j )) ^ { + } \Delta t } { 1 + r ( i , j ) \Delta t }\]</span></p>
+<p>其中，cap和floor与波动率sigma无关，但是cap-floor与sigma有关</p>
+<h2 id="hull-white模型">Hull-White模型</h2>
+<h3 id="理论基础-1">理论基础</h3>
+<p>短期利率满足以下过程</p>
+<p><span class="math display">\[d r ( t ) = ( \theta ( t ) - a r ( t ) ) d t + \sigma d W _ { t }\]</span></p>
+<p>常数a显然和r的收敛速度相关，常数波动率σ代表了r的波动。时间函数θ(t)是为用于拟合初始利率曲线使用的。为了简化推导，我们先来研究</p>
+<p><span class="math display">\[d x ( t ) = - a x ( t ) d t + \sigma d W _ { t }\qquad(1.1)\]</span></p>
+<p>类似ito积分例4，解得：</p>
+<p><span class="math display">\[x ( t ) = e ^ { - a \left( t - t _ { 0 } \right) } x \left( t _ { 0 } \right) + \sigma \int _ { t _ { 0 } } ^ { t } e ^ { - a ( t - s ) } d W _ { s }\qquad(1.2)\]</span></p>
+<p>像以前一样，我们得到</p>
+<p><span class="math display">\[E \left( x ( t ) | \mathcal { F } \left( t _ { 0 } \right) \right) = e ^ { - a \left( t - t _ { 0 } \right) } x \left( t _ { 0 } \right)\qquad(1.3)\\V \left( x ( t ) | \mathcal { F } \left( t _ { 0 } \right) \right) = \sigma ^ { 2 } \int _ { t _ { 0 } } ^ { t } e ^ { - 2 a ( t - s ) } d s = \frac { \sigma ^ { 2 } } { 2 a } \left( 1 - e ^ { - 2 a \left( t - t _ { 0 } \right) } \right)\qquad(1.4)\]</span></p>
+<p>进一步积分</p>
+<p><span class="math display">\[\int_{t_0}^Tx(s)ds=\int_{t_0}^Te^{-a(s-t_0)}x(t_0)ds+\sigma\int_{t_0}^T\int_{t_0}^se^{-a(s-u)}dW_uds\\=x(t_0){1-e^{-a(T-t_0)}\over a}+\sigma\int_{t_0}^T\int_u^T e^{au}e^{-as}dsdW_u\\=\frac { 1 - e ^ { - a ( T - t_0 ) } } { a } x ( t_0 ) + \frac { \sigma } { a } \int _ {t_0} ^ { T } 1 - e ^ { - a ( T - u ) } d W _ { u }\]</span></p>
+<blockquote>
+<p>双重积分交换次序，画图即可解决</p>
+</blockquote>
+<p>我们看到</p>
+<p><span class="math display">\[E \left( \int _ { t_0 } ^ { T } x ( s ) d s | \mathcal { F } ( t ) \right) = \frac { 1 - e ^ { - a ( T - t_0 ) } } { a } x ( t_0 )\]</span></p>
+<p>和</p>
+<p><span class="math display">\[\begin{aligned} V \left( \int _ { t_0 } ^ { T } x ( s ) d s | \mathcal { F } ( t ) \right) &amp; = \frac { \sigma ^ { 2 } } { a ^ { 2 } } \int _ { t_0 } ^ { T } \left( 1 - 2 e ^ { - a ( T - s ) } + e ^ { - 2 a ( T - s ) } \right) d s \\ &amp; = \frac { \sigma ^ { 2 } } { a ^ { 2 } } \left( T - t_0 - \frac { 3 } { 2 a } + \frac { 2 } { a } e ^ { - a ( T - t_0 ) } - \frac { 1 } { 2 a } e ^ { - 2 a ( T - t_0 ) } \right) \\ &amp; = V ( t_0 , T ) \end{aligned}\]</span></p>
+<p>为了拟合初始的折现值，我们现在加上漂移项θ(t）我们假设</p>
+<p><span class="math display">\[r ( t ) = x ( t ) + \theta ( t )\]</span></p>
+<p>一般的对于一个正态分布 X，我们都有</p>
+<p><span class="math display">\[E \left( e ^ { X } \right) = e ^ { E ( X ) + \frac { 1 } { 2 } V ( X ) }\\E \left( e ^ { -X } \right) = -e ^ { E ( X ) + \frac { 1 } { 2 } V ( X ) }\]</span></p>
+<p>这样折现值就成为</p>
+<p><span class="math display">\[\begin{aligned} P ( t_0 , T ) &amp; = \mathrm { E } \left( e ^ { - \int _ { t_0 } ^ { T } x ( s ) d s } | \mathcal { F } ( t_0 ) \right) e ^ { - \int _ { t_0 } ^ { T } \theta ( s ) d s } \\ &amp; = e ^ { - \int _ { t_0 } ^ { T } \theta ( s ) d s } e ^ { - x ( t_0 ) C ( t_0 , T ) + \frac { 1 } { 2 } V ( t_0 , T ) } \end{aligned}\qquad(1.5)\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[C ( t_0 , T ) = \frac { 1 - e ^ { - a ( T - t_0 ) } } { a }\]</span></p>
+<p>接下来求<span class="math inline">\(e ^ { - \int _ { t } ^ { T } \theta ( s ) d s }\)</span>，比较初始的利率曲线，</p>
+<p><span class="math display">\[\begin{aligned} P ^ { M } ( 0 , T ) &amp; = e ^ { - \int _ { 0 } ^ { T } \theta ( s ) d s + \frac { 1 } { 2 } V ( 0 , T ) } \\ P ^ { M } ( 0 , t ) &amp; = e ^ { - \int _ { 0 } ^ { t } \theta ( s ) d s + \frac { 1 } { 2 } V ( 0 , t ) } \end{aligned}\]</span></p>
+<p>我们看到</p>
+<p><span class="math display">\[e ^ { - \int _ { t } ^ { T } \theta ( s ) d s } = \frac { P ^ { M } ( 0 , T ) } { P ^ { M } ( 0 , t ) } e ^ { - \frac { 1 } { 2 } ( V ( 0 , T ) - V ( 0 , t ) ) }\]</span></p>
+<p>代入式（1.5），最后我们有</p>
+<p><span class="math display">\[P ( t , T ) = \left( \frac { P ^ { M } ( 0 , T ) } { P ^ { M } ( 0 , t ) } \right) \exp \left( - x ( t ) C ( t , T ) + \frac { 1 } { 2 } ( V ( t , T ) + V ( 0 , t ) - V ( 0 , T ) ) \right)\]</span></p>
+<hr>
+<blockquote>
+<p>下面不知道有什么用</p>
+</blockquote>
+<p>同时求导以后也有</p>
+<p><span class="math display">\[\theta ( t ) = - \frac { 1 } { 2 } V ^ { \prime } ( 0 , t ) + f ( 0 , t )\]</span></p>
+<p>这里f（0，t）是利率的远期。</p>
+<h3 id="模拟">模拟</h3>
+<p>1、根据式（1.3）式（1.4）生成相应的随机变量<span class="math inline">\(x_k\)</span>，其中<span class="math inline">\(x_0=0\)</span></p>
+<p><span class="math display">\[x_k=-ax_kdt+\sigma dW_t\qquad(2.1)\]</span></p>
+<p>2、生成<span class="math inline">\(\int _ { t _ { k - 1 } } ^ { t _ { k } } x _ { s } d s\)</span>，因为</p>
+<p><span class="math display">\[\begin{aligned} \int _ { t _ { k - 1 } } ^ { t _ { k } } x ( s ) d s &amp; = \frac { 1 - e ^ { - a \Delta t } } { a } x _ { k - 1 } + \frac { \sigma } { a } \int _ { t _ { k - 1 } } ^ { t _ { k } } \left( 1 - e ^ { - a \left( t _ { k } - t \right) } \right) d W _ { t } \\ &amp; = \frac { 1 - e ^ { - a \Delta t } } { a } x _ { k - 1 } + \frac { \sigma } { a } \left( W _ { t _ { k } } - W _ { t _ { k - 1 } } \right) - \frac { \sigma } { a } \int _ { t _ { k - 1 } } ^ { t _ { k } } e ^ { - a \left( t _ { k } - t \right) } d W _ { t } \end{aligned}\]</span></p>
+<p>所以需要生成两个变量，一个是<span class="math inline">\(\Delta W_t\)</span>，一个是<span class="math inline">\(\int _ { t _ { k - 1 } } ^ { t _ { k } } e ^ { - a \left( t _ { k } - t \right) } d W _ { t }\)</span>，他们两个是有相关性的，为此计算下面的期望</p>
+<p><span class="math display">\[\begin{array} { l } { E \left( \int _ { t _ { k - 1 } } ^ { t _ { k } } e ^ { - a \left( t _ { k } - s \right) } d W _ { s } , W _ { t _ { k } } - W _ { t _ { k - 1 } } \right) } \\ { = E \left( \int _ { t _ { k - 1 } } ^ { t _ { k } } e ^ { - a \left( t _ { k } - s \right) } d W _ { s } , \int _ { t _ { k - 1 } } ^ { t _ { k } } d W _ { s } \right) } \\ { = \int _ { t _ { k - 1 } } ^ { t _ { k } } e ^ { - a \left( t _ { k } - s \right) } d s } \\ { = \frac { 1 } { a } \left( 1 - e ^ { - a \left( t _ { k } - t _ { k - 1 } \right) } \right) } \end{array}\]</span></p>
+<p>上式即求出了二者的协方差，布朗运动差分的方差是<span class="math inline">\(\Delta t\)</span>，积分的方差也好求（命名为<span class="math inline">\(Var(int)\)</span>），自行推导，根据这些数据我们就可以进行Cholesky分解</p>
+<p><span class="math display">\[
+  \begin{pmatrix}
+   \sqrt{\Delta t} &amp; \sqrt{corr} \\
+   0 &amp; \sqrt{Var(int)-corr^2}
+  \end{pmatrix} 
+\]</span></p>
+<p>生成两个正态分布<span class="math inline">\(Z_1,Z_2\)</span>，<span class="math inline">\(\Delta W_t\)</span>为<span class="math inline">\(\sqrt{\Delta t}*Z_1\)</span>，积分为<span class="math inline">\(\sqrt{corr}*Z_1+\sqrt{Var(int)-corr^2}*Z_2\)</span></p>
+<p>3、生成<span class="math inline">\(P \left( t _ { k - 1 } , t _ { k } \right)\)</span>，由下面公式得出：</p>
+<p><span class="math display">\[P \left( t _ { k - 1 } , t _ { k } \right) = e^{-\int_{t_{k-1}}^{t_k}x(t)dt}·e^{-\int_{t_{k-1}}^{t_k}\theta(t)dt}\\=e ^ { - \int _ { t _ { k - 1 } } ^ { t _ { k } } x ( t ) d t } \frac { P ^ { M } \left( 0 , t _ { k } \right) } { P ^ { M } \left( 0 , t _ { k - 1 } \right) } e ^ { - \frac { 1 } { 2 } \left( V \left( 0 , t _ { k } \right) - V \left( 0 , t _ { k - 1 } \right) \right) }\]</span></p>
+<p>4、求期望。</p>
+<h3 id="各类衍生品计算">各类衍生品计算</h3>
+<ul>
+<li>无息债券的看涨期权</li>
+</ul>
+<p>求一个到期日是 10 年的、在第 5 年到期的无息债券的看涨期权价格。</p>
+<p>根据利率曲线（各年无息债券价格），利用远期利率公式，求出远期利率，有了远期利率，就可以求出远期折现值</p>
+<p>就可以求出无息债券折现到第五年的市场价格：<span class="math inline">\(B(5,6)*B(6,7)*…B(9,10)\)</span></p>
+<p>同样地，利用拟合结果（P是拟合的无息债价格），算出无息债券折现到第五年的模拟价格，<span class="math inline">\(期权价格=max\{模拟价格-实际价格,0\}\)</span>，然后再折现到今天（乘以模拟Pm(0,5)），生成100条路径进行拟合，求出期望即可</p>
+<blockquote>
+<p>这里的实际价格其实是行权价格K，模拟价格是第5年可能的市场价格S</p>
+</blockquote>
+<ul>
+<li>看跌期权</li>
+</ul>
+<p><span class="math display">\[max\{实际价格-模拟价格,0\}\]</span></p>
+<ul>
+<li>可赎回债券</li>
+</ul>
+<p>可赎回债券亦称“可买回债券”，是指发行人有权在特定的时间按照某个价格强制从债券持有人手中将其赎回的债券，可视为是债券与看涨期权的结合体。在市场利率跌至比可赎回债券的票面利率低得多的时候，债务人如果认为将债券赎回并且按照较低的利率重新发行债券，比按现有的债券票面利率继续支付利息要合算，就会将其赎回。</p>
+<p>计算到期日是 10 年的、票面利率为c的、可以按照本金在第 5 年赎回的债券的价格。</p>
+<p>首先，算出拟合的P(5,t)，（6&lt;t&lt;=10），因为每年派息c，所以将每年的利息加上最后还本1折现到第五年，即</p>
+<p><span class="math display">\[D=c·\sum_6^{10}P(5,t)+P(5,10)\]</span></p>
+<p>如果D大于1，债券发行人就会以1元价格赎回，小于1不赎回，即第五年该债券价格为<span class="math inline">\(min\{D,1\}\)</span>。最后折现到今天（乘以模拟Pm(0,5)），<strong>注意，前五年同样有c的利息，也要一一折现</strong>，</p>
+<ul>
+<li>可回售债券</li>
+</ul>
+<p>可回售债券亦称“卖回债券”。允许投资者以事先规定的价格将债券提前回售给发行人权利的债券。一般出现在利率上升、债券价格下降的时候。投资者持有的回售权是在标的价格下跌时出售标的资产的权利，所以它是看跌期权。在存在回售条款的情况下，投资者有权根据设定的价格出售债券，这将限制投资者因为利率上升而遭受的损失。</p>
+<p><span class="math inline">\(max\{D,1\}\)</span></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/wiki/经济学/国际贸易/07国际贸易策略/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">07国际贸易策略</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            雁陎 &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
